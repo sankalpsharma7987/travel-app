@@ -1,10 +1,10 @@
 const $WEATHER_SUMMARY_ELEMENT = document.querySelector('.weather-summary-section');
 
-const updateWeatherDetail = (data)=>{
+const updateWeatherSummary = (data)=>{
 
     data.forEach(
         element => {
-            const fragment = Client.createWeatherDetailElements(element);
+            const fragment = Client.createWeatherSummaryElements(element);
             $WEATHER_SUMMARY_ELEMENT.appendChild(fragment);
         }
 
@@ -14,4 +14,4 @@ const updateWeatherDetail = (data)=>{
 
 }
 
-export { updateWeatherDetail };
+export { updateWeatherSummary };

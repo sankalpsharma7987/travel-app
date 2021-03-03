@@ -8,9 +8,30 @@ const getTravelData = async()=> {
     let dayDiff = Client.calculateDateDiffDays(dateVal.toString(),$DATE_ELEMENT.value)
     let weatherDataType = dayDiff>=6?'forecast':'current'
 
-    Client.fetchTravelData($INPUT_ELEMENT.value,weatherDataType).then(
-        data => Client.updateUI(data)
-    )
+    Client.clearSummaryUI();
+    Client.clearDetailUI();
+
+    if(weatherDataType==='forecast')
+    {
+        Client.showWeatherSummary(true);
+        Client.fetchTravelWeatherDetailData($INPUT_ELEMENT.value).then(
+            data => Client.updateDetailUI(data)
+        )
+
+        Client.fetchTravelWeatherSummaryData($INPUT_ELEMENT.value).then(
+            data => Client.updateSummaryUI(data)
+        )
+    }
+
+    else {
+        Client.showWeatherSummary(false);
+        Client.fetchTravelWeatherDetailData($INPUT_ELEMENT.value).then(
+            data => Client.updateDetailUI(data)
+        )
+    }
+
+    Client.clearUI() // Clears the textbox UI Element.
+
 }
 
 $SUBMIT_BUTTON.addEventListener('click',getTravelData);

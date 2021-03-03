@@ -1,4 +1,4 @@
-const createWeatherDetailElements = (data)=>{
+const createWeatherSummaryElements = (data)=>{
 
     const fragment = document.createDocumentFragment();
 
@@ -54,4 +54,4 @@ const createWeatherDetailElements = (data)=>{
 
 }
 
-export { createWeatherDetailElements };
+export { createWeatherSummaryElements };

@@ -1,7 +1,7 @@
-const fetchTravelData = async(address, weatherDataType)=>{
+const fetchTravelWeatherDetailData = async(address)=>{
 
     try {
-        const res = await fetch(`http://localhost:3000/travel?address=${address}&weather=${weatherDataType}`)
+        const res = await fetch(`http://localhost:3000/current?address=${address}`)
         const data = await res.json();
         return data;
     }
@@ -11,4 +11,4 @@ const fetchTravelData = async(address, weatherDataType)=>{
 
 }
 
-module.exports =  { fetchTravelData };
+module.exports =  { fetchTravelWeatherDetailData };
