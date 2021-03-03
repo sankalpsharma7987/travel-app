@@ -1,7 +1,7 @@
 const updateDetailUI = async(weatherData)=>{
     try {
         // Client.clearDetailUI();
-        Client.updateWeatherDetail(weatherData.data);
+        Client.updateWeatherDetail(weatherData);
     }
 
     catch(e)
