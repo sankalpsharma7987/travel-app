@@ -35,4 +35,4 @@ const mockGeoNameAPI = (address,callback)=>{
 
 }
 
-module.exports = mockGeoNameAPI
+module.exports = { mockGeoNameAPI }
