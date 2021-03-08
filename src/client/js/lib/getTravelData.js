@@ -10,6 +10,7 @@ const getTravelData = async()=> {
 
     Client.clearSummaryUI();
     Client.clearDetailUI();
+    Client.clearLocationImageUI();
 
     if(weatherDataType==='forecast')
     {
@@ -29,6 +30,10 @@ const getTravelData = async()=> {
             data => Client.updateDetailUI(data)
         )
     }
+
+    Client.fetchLocationImage($INPUT_ELEMENT.value).then(
+        data=> Client.updateLocationImageUI(data)
+    );
 
     Client.clearUI() // Clears the textbox UI Element.
 

@@ -16,7 +16,7 @@ const createWeatherSummaryElements = (data)=>{
     temp.classList.add('weather-summary-temp');
 
     const clouds = document.createElement('div');
-    text = `Cloud Cover &nbsp</b> ${data.clouds} %`;
+    text = `Cloud Cover </b> ${data.clouds} %`;
     clouds.innerHTML  = text;
     clouds.classList.add('weather-summary-cloud');
 
@@ -32,8 +32,13 @@ const createWeatherSummaryElements = (data)=>{
     weatherDescription.classList.add('weather-description');
 
     const weatherImage = document.createElement('div');
-    text = `<img src=https://www.weatherbit.io/static/img/icons/${data.weather.icon}.png>`;
-    weatherImage.innerHTML = text;
+
+    const image = document.createElement('img');
+    text = `https://www.weatherbit.io/static/img/icons/${data.weather.icon}.png`;
+    image.setAttribute('src',text);
+    image.classList.add('weather-summary-image');
+    weatherImage.appendChild(image);
+    
     
     const weatherSummaryDescription = document.createElement('div');
     weatherSummaryDescription.appendChild(weatherImage);

@@ -1,0 +1,9 @@
+#user-section {
+    display: flex;
+    flex-flow: column;
+    grid-area: user;
+    grid-template-areas:
+    'form form form form'
+    'saved-items saved-items saved-items saved-items';
+    grid-gap: 0.8em;
+}

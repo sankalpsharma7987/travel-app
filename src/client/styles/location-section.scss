@@ -1,0 +1,18 @@
+#location-section {
+    display: flex;
+    flex-flow: column;
+    grid-area: location;
+    grid-template-areas: 
+    'detail detail detail image image image '
+    'summary summary summary summary summary summary';
+    grid-gap: 0.8em;
+}
+
+.location-image {
+
+    img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+}

@@ -1,4 +1,4 @@
-const $WEATHER_DETAIL_ELEMENT = document.querySelector('.weather-detail-section');
+const $WEATHER_DETAIL_ELEMENT = document.querySelector('.weather-detail');
 
 const updateWeatherDetail = (weatherData)=>{
 
