@@ -35,7 +35,7 @@ const fetchMeaningCloudData = (textValue)=>{
                     
                     let position = scoreTagArray.findIndex(scoreTag => scoreTag.key === body.score_tag);
                     let scoreTag = position<0?'N/A':scoreTagArray[position].value;
-                    resolve({tags:textValue.tags,id:textValue.id,scoreTag:scoreTag});
+                    resolve({tags:textValue.tags,id:textValue.id,scoreTag});
             
                 }
             })
