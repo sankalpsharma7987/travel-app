@@ -1,20 +1,20 @@
-// const loadTripData = async()=>{
+const loadTripData = async()=>{
 
-//     try {
-//         data = await Client.getTripData();
-//         if(data)
-//         {
-//             await updateSaveTripUI(data);
-//         }
+    try {
+        data = await Client.getTripData();
+        if(data)
+        {
+            await Client.updateSaveTripUI(data);
+        }
 
-//     }
-//     catch(e)
-//     {
-//         console.log(e);
-//     }
+    }
+    catch(e)
+    {
+        console.log(e);
+    }
 
-// }
+}
 
-// window.addEventListener('load',loadTripData);
+window.addEventListener('load',loadTripData);
 
-// module.exports = { loadTripData };
+module.exports = { loadTripData };
