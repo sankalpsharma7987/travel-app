@@ -7,6 +7,7 @@ const createWeatherDetailElements = (weatherData)=>{
     const location = document.createElement('div');
     let text= `Weather for ${weatherData.city_name}`;
     location.innerHTML = text;
+    location.classList.add('weather-detail-location');
     
     const temp = document.createElement('div');
     text = `<h1>${weatherData.data.temp}&deg</h1>`;
@@ -35,8 +36,15 @@ const createWeatherDetailElements = (weatherData)=>{
     text = `<img src=https://www.weatherbit.io/static/img/icons/${weatherData.data.weather.icon}.png>`;
     weatherImage.innerHTML = text;
 
+    const saveTripButton = document.createElement('button');
+    text = "Save Trip";
+    saveTripButton.innerHTML = text;
+    saveTripButton.classList.add('save-trip-btn');
+    saveTripButton.addEventListener('click',Client.saveTrip);
+
     weatherDetail.appendChild(detail);
     weatherDetail.appendChild(weatherImage);
+    weatherDetail.appendChild(saveTripButton);
     
     fragment.appendChild(weatherDetail);
 

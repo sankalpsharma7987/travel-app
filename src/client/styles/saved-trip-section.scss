@@ -1,0 +1,42 @@
+.saved-trips {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content:flex-start;
+}
+
+.saved-trip {
+    display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "date location daysRemaining";
+    grid-gap: 0.5em;
+    padding: 8px 8px 8px 8px;
+    margin: 8px 8px 8px 8px;
+    border-top: 1px solid rgb(193, 201, 209);
+    border-radius: 0.5em;
+    background: rgb(229, 234, 238);
+}
+
+.saved-trip-date {
+    display: flex;
+    grid: date;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.saved-trip-location {
+    display: flex;
+    grid: date;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.saved-trip-daysRemaining {
+    display: flex;
+    grid: daysRemaining;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
