@@ -32,11 +32,12 @@ router.get('/fetchImage',(req,res)=>{
                     else {
 
                         let positiveImageData = [];
-                        let str = 'positive';
+                        let str = 'Negative';
                         sentimentData.forEach(data=>{
-                            if(data.scoreTag.toLowerCase().includes(str))
-                            {
+                            if(!(data.scoreTag.toLowerCase().includes(str)))
+                            {   
                                 const image = imageDataSet.find(element=>element.id===data.id)
+                                image.scoreTag = data.scoreTag;
                                 positiveImageData.push(image);
 
                             }
