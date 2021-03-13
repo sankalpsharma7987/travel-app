@@ -25,11 +25,13 @@ import { showWeatherSummary } from './js/lib/summary/showWeatherSummary';
 
 import { clearSaveTripUI } from './js/lib/trip/clearSaveTripUI';
 import { createSaveTripElement } from './js/lib/trip/createSaveTripElement';
+import { deleteSavedTrip } from './js/lib/trip/deleteSavedTrip';
 import { getTripData } from './js/lib/trip/getTripData';
 import { loadTripData } from './js/lib/trip/loadTripData';
 import { postTripData } from './js/lib/trip/postTripData';
 import { updateSaveTripUI } from './js/lib/trip/updateSaveTripUI';
 import { saveTrip } from './js/lib/trip/saveTrip';
+import { removeSavedTrip } from './js/lib/trip/removeSavedTrip';
 
 
 
@@ -44,6 +46,6 @@ import './styles/saved-trip-section.scss';
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,fetchLocationImage,updateLocationImage,updateLocationImageUI,
     clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,showWeatherSummary,
-    clearSaveTripUI,createSaveTripElement,getTripData,
+    clearSaveTripUI,createSaveTripElement,deleteSavedTrip,getTripData,
     loadTripData,
-    postTripData,updateSaveTripUI,saveTrip };
+    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip };

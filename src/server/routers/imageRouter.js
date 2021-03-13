@@ -5,60 +5,67 @@ const { mockPixaBayAPI } = require('../lib/pixaBay');
 const router = new express.Router();
 
 router.get('/fetchImage',(req,res)=>{
+    try {
+        mockPixaBayAPI(req.query.address,(error,imageData)=>{
+                
+            if(error)
+            {
+                res.send({error:'Could not find image for this location'})
+            }
 
-    mockPixaBayAPI(req.query.address,(error,imageData)=>{
-            
-        if(error)
-        {
-            res.send({error})
-        }
+            else 
+            {
+                let imageFilteredData = [];
+                let maxValue = imageData.length>20?20:imageData.length;
+                let imageDataSet = imageData.slice(0,maxValue);
 
-        else 
-        {
-            let imageFilteredData = [];
-            let maxValue = imageData.length>20?20:imageData.length;
-            let imageDataSet = imageData.slice(0,maxValue);
-
-            imageDataSet.forEach(image=>imageFilteredData.push({tags:image.tags,id:image.id}))
+                imageDataSet.forEach(image=>imageFilteredData.push({tags:image.tags,id:image.id}))
 
 
-            mockMeaningCloudAPI(imageDataSet,(error,sentimentData)=>{
+                mockMeaningCloudAPI(imageDataSet,(error,sentimentData)=>{
 
-                if(error)
-                {
-                    res.send(error);
-                }
+                    if(error)
+                    {
+                        res.send(error);
+                    }
 
-                else {
+                    else {
 
-                    let positiveImageData = [];
-                    let str = 'positive';
-                    sentimentData.forEach(data=>{
-                        if(data.scoreTag.toLowerCase().includes(str))
-                        {
-                            const image = imageDataSet.find(element=>element.id===data.id)
-                            positiveImageData.push(image);
+                        let positiveImageData = [];
+                        let str = 'positive';
+                        sentimentData.forEach(data=>{
+                            if(data.scoreTag.toLowerCase().includes(str))
+                            {
+                                const image = imageDataSet.find(element=>element.id===data.id)
+                                positiveImageData.push(image);
+
+                            }
+                        })
+
+                        if(positiveImageData.length==0)
+                        {   
+                            res.send({error:"Could not find image for this location"});
 
                         }
-                    })
 
-                    if(positiveImageData.length==0)
-                    {   
-                        res.send({error:"Could not find image for this location"});
-
+                        else
+                        {
+                            const positiveImage = positiveImageData.reduce((prev,curr)=>prev.downloads>curr.downloads?prev:curr);
+                            res.send(positiveImage);
+                        }
+                        
                     }
+                })
+                
+            }
+        })
 
-                    else
-                    {
-                        const positiveImage = positiveImageData.reduce((prev,curr)=>prev.downloads>curr.downloads?prev:curr);
-                        res.send(positiveImage);
-                    }
-                    
-                }
-            })
-            
-        }
-    })
+    }
+    catch(e)
+    {
+        console.log(e);
+        res.send({error:'Could not find image for this location'})
+    }
 
 })
 

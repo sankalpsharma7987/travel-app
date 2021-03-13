@@ -8,7 +8,7 @@
 .saved-trip {
     display: grid;
     // grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "date location daysRemaining";
+    grid-template-areas: "date location daysRemaining closebox";
     grid-gap: 0.5em;
     padding: 8px 8px 8px 8px;
     margin: 8px 8px 8px 8px;
@@ -19,7 +19,7 @@
 
 .saved-trip-date {
     display: flex;
-    grid: date;
+    grid-area: date;
     flex-flow: row;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
 
 .saved-trip-location {
     display: flex;
-    grid: date;
+    grid-area: location;
     flex-flow: row;
     justify-content: center;
     align-items: center;
@@ -35,8 +35,22 @@
 
 .saved-trip-daysRemaining {
     display: flex;
-    grid: daysRemaining;
+    grid-area: daysRemaining;
     flex-flow: row;
     justify-content: center;
     align-items: center;
+}
+
+.save-trip-remove {
+    display: flex;
+    grid-area: closebox;
+    flex-flow: row;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.save-trip-remove:hover {
+    cursor: pointer;
+    background: lightslategray;
+
 }

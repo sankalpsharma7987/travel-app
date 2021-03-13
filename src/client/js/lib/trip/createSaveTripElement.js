@@ -1,5 +1,5 @@
 const createSaveTripElement = (data) => {
-
+    console.log(data);
     const date = document.createElement('div');
     let text = `${data.date}`;
     date.innerHTML = text;
@@ -22,10 +22,19 @@ const createSaveTripElement = (data) => {
     days.innerHTML = text;
     days.classList.add('saved-trip-daysRemaining');
 
+    const closeBox = document.createElement('div');
+    text = 'Remove';
+    closeBox.innerHTML = text;
+    closeBox.classList.add('save-trip-remove');
+    closeBox.setAttribute('id',data.id);
+
     const tripDetail = document.createElement('div');
+    tripDetail.setAttribute('id',data.id);
+
     tripDetail.appendChild(date);
     tripDetail.appendChild(location);
     tripDetail.appendChild(days);
+    tripDetail.appendChild(closeBox);
     tripDetail.classList.add('saved-trip');
 
     return tripDetail;

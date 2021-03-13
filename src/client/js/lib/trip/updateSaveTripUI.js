@@ -1,7 +1,8 @@
 const $WEATHER_SAVE_ELEMENT = document.querySelector('.saved-trips');
 
-const updateSaveTripUI = (tripData)=>{
+const updateSaveTripUI = (data)=>{
     
+    const tripData = Object.values(data);
     Client.clearSaveTripUI();
     tripData.forEach(data=>{
         const fragment = Client.createSaveTripElement(data);

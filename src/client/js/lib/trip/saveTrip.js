@@ -1,16 +1,13 @@
-// const $SAVE_TRIP_BUTTON = document.querySelector('.save-trip-btn');
 const saveTrip = async()=>{
 
     try {
 
-        const message =  await Client.postTripData();
 
-        if(message.success === 'Trip saved') 
-        {
-            data = await Client.getTripData();
-            await Client.updateSaveTripUI(data);
-        }
+        const data =  await Client.postTripData();
+        Client.updateSaveTripUI(data);
 
+
+        
     }
 
     catch(e)
@@ -19,6 +16,5 @@ const saveTrip = async()=>{
     }
     
 }
-// $SAVE_TRIP_BUTTON.addEventListener('click',saveTrip);
 
 module.exports = { saveTrip };

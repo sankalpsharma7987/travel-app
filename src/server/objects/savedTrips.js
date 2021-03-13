@@ -1,3 +1,3 @@
-const savedItems = [];
+let savedTrips = {};
 
-module.exports = savedItems;
+module.exports = savedTrips;
