@@ -5,9 +5,7 @@ const saveTrip = async()=>{
 
         const data =  await Client.postTripData();
         Client.updateSaveTripUI(data);
-
-
-        
+    
     }
 
     catch(e)

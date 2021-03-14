@@ -5,8 +5,11 @@ const $DATE_ELEMENT = document.querySelector('#date-picker');
 const getTravelData = async()=> {
 
     const dateVal = new Date();
-    let dayDiff = Client.calculateDateDiffDays(dateVal.toString(),$DATE_ELEMENT.value)
+    const datePickerDate = $DATE_ELEMENT.value;
+
+    let dayDiff = Client.calculateDateDiffDays(dateVal.toString(),datePickerDate)
     let weatherDataType = dayDiff>=6?'forecast':'current'
+
 
     Client.clearSummaryUI();
     Client.clearDetailUI();
@@ -16,7 +19,7 @@ const getTravelData = async()=> {
     {
         Client.showWeatherSummary(true);
         Client.fetchTravelWeatherDetailData($INPUT_ELEMENT.value).then(
-            data => Client.updateDetailUI(data)
+            data => Client.updateDetailUI(data,datePickerDate)
         )
 
         Client.fetchTravelWeatherSummaryData($INPUT_ELEMENT.value).then(
@@ -27,7 +30,7 @@ const getTravelData = async()=> {
     else {
         Client.showWeatherSummary(false);
         Client.fetchTravelWeatherDetailData($INPUT_ELEMENT.value).then(
-            data => Client.updateDetailUI(data)
+            data => Client.updateDetailUI(data,datePickerDate)
         )
     }
 

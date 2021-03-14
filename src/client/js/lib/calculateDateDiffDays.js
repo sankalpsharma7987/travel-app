@@ -2,7 +2,7 @@ const calculateDateDiffDays = (currentDateString,futureDateString)=>{
 
     const currentDate = new Date(currentDateString);
     const futureDate = new Date(futureDateString);
-    
+
     const currentDateUTC = Date.UTC(
         currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate()
     )

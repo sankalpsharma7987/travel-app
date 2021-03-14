@@ -1,5 +1,5 @@
 const createSaveTripElement = (data) => {
-    console.log(data);
+
     const date = document.createElement('div');
     let text = `${data.date}`;
     date.innerHTML = text;
@@ -11,13 +11,59 @@ const createSaveTripElement = (data) => {
     location.classList.add('saved-trip-location');
 
     const dateVal = new Date();
-    let dateDay = dateVal.getDate();
-    let dateMonth = dateVal.getMonth()+1;
-    let dateYear = dateVal.getFullYear();
-    const currentDate = `${dateYear}-${dateMonth}-${dateDay}`;
-    const daysRemaining = Client.calculateDateDiffDays(currentDate,data.date);
-  
-    text = `${daysRemaining} days to go`;
+    let currentDay = dateVal.getDate();
+    let currentMonth = dateVal.getMonth()+1;
+    let currentYear = dateVal.getFullYear();
+
+    /*This timestamp is added as a workaround for the day offset that is returned when string is passed to date function.
+    This offset issue is not observed in setDatePickerValue function as we are passing the date in the Date constructor and not the string.*/
+    
+    const futureDateVal = new Date(`${data.date} 00:00:00`); 
+    let futureDay = futureDateVal.getDate();
+    let futureMonth = futureDateVal.getMonth()+1;
+    let futureYear = futureDateVal.getFullYear();
+
+    if(futureDay<10)
+    {
+        futureDay = `0${futureDay}`
+    }
+    if(currentDay<10){
+        currentDay = `0${currentDay}`;
+    }
+
+    if(currentMonth<10){
+        currentMonth = `0${currentMonth}`;
+    }
+
+    if(futureMonth<10)
+    {
+        futureMonth = `0${futureMonth}`
+    }
+   
+    const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
+    const futureDate = `${futureYear}-${futureMonth}-${futureDay}`
+    const daysRemaining = Client.calculateDateDiffDays(currentDate,futureDate);
+    
+    if(daysRemaining<0)
+    {
+        text = 'Expired';
+    }
+    else if(daysRemaining==0)
+    {
+        text = 'Today';
+
+    }
+
+    else if(daysRemaining==1)
+    {
+        text = 'Tomorrow';
+    }
+
+    else if(daysRemaining>1)
+    {
+        text = `${daysRemaining} days to go`;
+    }
+    
     const days = document.createElement('div');
     days.innerHTML = text;
     days.classList.add('saved-trip-daysRemaining');

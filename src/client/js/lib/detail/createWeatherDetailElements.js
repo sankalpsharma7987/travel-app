@@ -1,4 +1,4 @@
-const createWeatherDetailElements = (weatherData)=>{
+const createWeatherDetailElements = (weatherData,datePickerDate)=>{
     
     const fragment = document.createDocumentFragment();
 
@@ -24,6 +24,13 @@ const createWeatherDetailElements = (weatherData)=>{
     const humidity = document.createElement('div');
     text = `Humidity ${weatherData.data.rh}%`;
     humidity.innerHTML = text;
+    
+    const travelDate = document.createElement('div');
+    text = `Travel Date ${datePickerDate}`;
+    travelDate.innerHTML = text;
+
+    travelDate.classList.add('weather-detail-travel-date')
+
 
     const detail = document.createElement('div');
     detail.appendChild(location);
@@ -31,6 +38,7 @@ const createWeatherDetailElements = (weatherData)=>{
     detail.appendChild(description);
     detail.appendChild(precip);
     detail.appendChild(humidity);
+    detail.appendChild(travelDate);
     
     const weatherImage = document.createElement('div');
     text = `<img src=https://www.weatherbit.io/static/img/icons/${weatherData.data.weather.icon}.png>`;

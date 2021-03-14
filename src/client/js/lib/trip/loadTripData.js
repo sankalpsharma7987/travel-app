@@ -2,12 +2,8 @@ const loadTripData = async()=>{
 
     try {
         data = await Client.getTripData();
+        Client.updateSaveTripUI(data)
 
-        if(!(data.error==='No trips saved'))
-        {
-            Client.updateSaveTripUI(data)
-
-        }
     }
     catch(e)
     {

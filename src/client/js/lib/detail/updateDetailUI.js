@@ -1,7 +1,7 @@
-const updateDetailUI = async(weatherData)=>{
+const updateDetailUI = async(weatherData,datePickerDate)=>{
     try {
         // Client.clearDetailUI();
-        Client.updateWeatherDetail(weatherData);
+        Client.updateWeatherDetail(weatherData,datePickerDate);
     }
 
     catch(e)

@@ -4,10 +4,13 @@ const updateSaveTripUI = (data)=>{
     
     const tripData = Object.values(data);
     Client.clearSaveTripUI();
-    tripData.forEach(data=>{
-        const fragment = Client.createSaveTripElement(data);
-        $WEATHER_SAVE_ELEMENT.appendChild(fragment);
-    });
+    if(!(data.error==='No trips saved'))
+    {
+        tripData.forEach(data=>{
+            const fragment = Client.createSaveTripElement(data);
+            $WEATHER_SAVE_ELEMENT.appendChild(fragment);
+        });
+    }
 
 }
 

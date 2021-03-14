@@ -43,7 +43,7 @@ router.delete('/deleteTrip',(req,res)=>{
         }
 
         else {
-            res.send({error:'Not trips saved'});
+            res.send({error:'No trips saved'});
             
         }
 
