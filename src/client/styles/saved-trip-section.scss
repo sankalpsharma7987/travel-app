@@ -13,6 +13,7 @@
         padding: $padding_8px;
         text-align: center;
         margin: $margin_8px;
+        font-size: 1.25em;
     }
 
     &-trips {
@@ -32,7 +33,7 @@
         margin: $margin_8px;
         border-top: 1px solid rgb(193, 201, 209);
         border-radius: 0.5em;
-        background: rgb(229, 234, 238);
+        background: $card-background;
 
     }
 
