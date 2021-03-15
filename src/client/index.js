@@ -42,6 +42,7 @@ import './styles/user-section.scss';
 import './styles/weather-detail.scss';
 import './styles/form-section.scss';
 import './styles/saved-trip-section.scss';
+import './styles/header-section.scss';
 
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,fetchLocationImage,updateLocationImage,updateLocationImageUI,

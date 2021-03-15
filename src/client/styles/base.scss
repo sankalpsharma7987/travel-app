@@ -19,6 +19,7 @@ h1 {
 #container {
     display: grid;
     grid-template-columns: repeat(10,1fr);
-    grid-template-areas: "user user user user location location location location location location";
+    grid-template-areas: "user user user user user user user user user user"
+                         "trip trip trip trip location location location location location location";
     grid-template-rows: auto;
 }

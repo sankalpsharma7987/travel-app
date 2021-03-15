@@ -1,3 +1,17 @@
+#saved-trip-section {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    grid-area: trip;
+}
+
+.saved-trip-heading {
+    text-align: center;
+    margin: 8px;
+
+}
+
 .saved-trips {
     display: flex;
     flex-flow: column;
