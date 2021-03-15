@@ -12,6 +12,7 @@ router.post('/saveTrip',(req,res)=>{
             location: req.body.location,
             startDate: req.body.startDate,
             endDate: req.body.endDate,
+            tripDuration: req.body.tripDuration,
             id
         };
         savedTrips[id] = trip;
