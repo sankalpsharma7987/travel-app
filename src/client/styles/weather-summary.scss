@@ -1,3 +1,5 @@
+@import './global-variables.scss';
+
 .weather-summary-section {
     grid-area: summary;
     display: flex;
@@ -12,8 +14,8 @@
     grid-auto-rows: 75px;
     grid-template-areas: "date temp descrip cloud precip";
     grid-gap: 0.5em;
-    padding: 8px 8px 8px 8px;
-    margin: 8px 8px 8px 8px;
+    padding: $padding_8px;
+    margin: $margin_8px;
     border-top: 1px solid rgb(193, 201, 209);
     border-radius: 0.5em;
     background: rgb(229, 234, 238);

@@ -1,3 +1,5 @@
+@import './global-variables.scss';
+
 #saved-trip-section {
     display: flex;
     flex-flow: column;
@@ -8,9 +10,9 @@
 
 .saved {
     &-trip-heading {
-        padding: 8px;
+        padding: $padding_8px;
         text-align: center;
-        margin: 8px;
+        margin: $margin_8px;
     }
 
     &-trips {
@@ -26,8 +28,8 @@
         // grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "date location daysRemaining closebox";
         grid-gap: 0.5em;
-        padding: 8px 8px 8px 8px;
-        margin: 8px 8px 8px 8px;
+        padding: $padding_8px;
+        margin: $margin_8px;
         border-top: 1px solid rgb(193, 201, 209);
         border-radius: 0.5em;
         background: rgb(229, 234, 238);

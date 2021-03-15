@@ -34,7 +34,7 @@ import { saveTrip } from './js/lib/trip/saveTrip';
 import { removeSavedTrip } from './js/lib/trip/removeSavedTrip';
 
 
-
+import './styles/global-variables.scss';
 import './styles/base.scss';
 import './styles/weather-summary.scss';
 import './styles/location-section.scss';

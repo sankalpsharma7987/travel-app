@@ -1,6 +1,8 @@
+@import './global-variables.scss';
+
 .form-section {
-    padding: 8px 8px 8px 8px;
-    margin: 8px 8px 8px 8px;
+    padding: $padding_8px;
+    margin: $margin_8px;
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
@@ -8,19 +10,19 @@
 
     #destination {
         line-height: 1.5;
-        padding: 8px;
+        padding: $padding_8px;
         font-size: 1.25em;
         border-radius: 0.5em;
     }
 
     .date-picker-class {
         font-size: 1.25em;
-        padding: 8px;
+        padding: $padding_8px;
         border-radius: 0.5em;
     }
 
     #submit-button {
-        padding: 8px 8px 8px 8px 8px;
+        padding: $padding_8px;
         font-size: 1.25em;
         border-radius: 0.5em;
 

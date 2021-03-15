@@ -1,17 +1,19 @@
+@import './global-variables.scss';
+
 .weather-detail-section {
     display: flex;
     grid-area: detail;
     flex-flow: row;
     justify-content: space-between;
-    margin: 8px 8px 8px 8px;
-    padding: 8px 8px 8px 8px;
+    margin: $margin_8px;
+    padding: $padding_8px;
 }
 
 .weather-detail {
     display: flex;
     flex-flow: column;
-    padding: 8px 8px 8px 8px;
-    margin: 8px 8px 8px 8px;
+    padding: $padding_8px;
+    margin: $margin_8px;
 
 }
 
