@@ -8,22 +8,22 @@ const createWeatherSummaryElements = (data)=>{
     const date = document.createElement('div');
     text = `${data.valid_date.substring(5,7)}/${data.valid_date.substring(8)}`;
     date.innerHTML = text;
-    date.classList.add('weather-summary-date');
+    date.classList.add('weather-summary-date','weather-summary-display');
 
     const temp = document.createElement('div');
     text = `${data.min_temp}&deg/${data.max_temp}&deg`;
     temp.innerHTML = text;
-    temp.classList.add('weather-summary-temp');
+    temp.classList.add('weather-summary-temp','weather-summary-display');
 
     const clouds = document.createElement('div');
     text = `Cloud Cover </b> ${data.clouds} %`;
     clouds.innerHTML  = text;
-    clouds.classList.add('weather-summary-cloud');
+    clouds.classList.add('weather-summary-cloud','weather-summary-display');
 
     const precip = document.createElement('div');
     text = `${data.precip} % chance of Precipiation`;
     precip.innerHTML = text;
-    precip.classList.add('weather-summary-precip');
+    precip.classList.add('weather-summary-precip','weather-summary-display');
         
     
     const weatherDescription = document.createElement('div');
@@ -44,7 +44,7 @@ const createWeatherSummaryElements = (data)=>{
     weatherSummaryDescription.appendChild(weatherImage);
     weatherSummaryDescription.appendChild(weatherDescription);
 
-    weatherSummaryDescription.classList.add('weather-summary-description');
+    weatherSummaryDescription.classList.add('weather-summary-description','weather-summary-display');
     weatherSummary.classList.add('weather-summary');
 
     weatherSummary.appendChild(date);

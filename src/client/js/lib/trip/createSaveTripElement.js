@@ -17,7 +17,7 @@ const createSaveTripElement = (data) => {
 
     /*This timestamp is added as a workaround for the day offset that is returned when string is passed to date function.
     This offset issue is not observed in setDatePickerValue function as we are passing the date in the Date constructor and not the string.*/
-    
+
     const futureDateVal = new Date(`${data.date} 00:00:00`); 
     let futureDay = futureDateVal.getDate();
     let futureMonth = futureDateVal.getMonth()+1;
@@ -71,7 +71,7 @@ const createSaveTripElement = (data) => {
     const closeBox = document.createElement('div');
     text = 'Remove';
     closeBox.innerHTML = text;
-    closeBox.classList.add('save-trip-remove');
+    closeBox.classList.add('saved-trip-remove');
     closeBox.setAttribute('id',data.id);
 
     const tripDetail = document.createElement('div');

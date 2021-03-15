@@ -1,11 +1,13 @@
-.header-section {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-}
+.header {
+    &-section {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
 
-.header-class {
-    h1{
-        font-size: 3em;
+    &-class {
+        h1 {
+            font-size: 3em;
+        }
     }
 }
