@@ -2,11 +2,15 @@ const postTripData = async()=>{
 
     const $LOCATION_VALUE = document.querySelector('.weather-detail-location');
     const location = $LOCATION_VALUE.textContent.substring(11);
-    const travelDate = document.querySelector('.weather-detail-travel-date').textContent.substring(12);
-
+    const travelStartDate = document.querySelector('.weather-detail-travel-start-date').textContent.substring(11);
+    const travelEndDate = document.querySelector('.weather-detail-travel-end-date').textContent.substring(8);
+    const tripDuration = document.querySelector('.weather-detail-trip-duration').textContent;
+    
     const trip = { 
         location: location,
-        date : travelDate
+        startDate : travelStartDate,
+        endDate: travelEndDate,
+        tripDuration: tripDuration
 };
 
     try {

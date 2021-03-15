@@ -1,44 +1,57 @@
-const createWeatherDetailElements = (weatherData,datePickerDate)=>{
+const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePickerValue,tripDuration)=>{
     
     const fragment = document.createDocumentFragment();
 
     const weatherDetail = document.createElement('div');
 
-    const location = document.createElement('div');
+    const locationDiv = document.createElement('div');
     let text= `Weather for ${weatherData.city_name}`;
-    location.innerHTML = text;
-    location.classList.add('weather-detail-location');
+    locationDiv.innerHTML = text;
+    locationDiv.classList.add('weather-detail-location');
     
-    const temp = document.createElement('div');
+    const tempDiv = document.createElement('div');
     text = `<h1>${weatherData.data.temp}&deg</h1>`;
-    temp.innerHTML = text;
+    tempDiv.innerHTML = text;
     
-    const description = document.createElement('div');
+    const descriptionDiv = document.createElement('div');
     text = `${weatherData.data.weather.description}`;
-    description.innerHTML = text;
+    descriptionDiv.innerHTML = text;
 
-    const precip = document.createElement('div');
+    const precipDiv = document.createElement('div');
     text = `Precipitation ${weatherData.data.precip}%`;
-    precip.innerHTML = text;
+    precipDiv.innerHTML = text;
 
-    const humidity = document.createElement('div');
+    const humidityDiv = document.createElement('div');
     text = `Humidity ${weatherData.data.rh}%`;
-    humidity.innerHTML = text;
+    humidityDiv.innerHTML = text;
     
-    const travelDate = document.createElement('div');
-    text = `Travel Date ${datePickerDate}`;
-    travelDate.innerHTML = text;
+    const travelStartDateDiv = document.createElement('div');
+    text = `Start Date ${startDatePickerValue}`;
+    travelStartDateDiv.innerHTML = text;
 
-    travelDate.classList.add('weather-detail-travel-date')
+    travelStartDateDiv.classList.add('weather-detail-travel-start-date')
 
+    
+    const travelEndDateDiv = document.createElement('div');
+    text = `End Date ${endDatePickerValue}`;
+    travelEndDateDiv.innerHTML = text;
+
+    travelEndDateDiv.classList.add('weather-detail-travel-end-date')
+
+    const tripDurationDiv = document.createElement('div');
+    text=  tripDuration==0?'Same Day Return':`Trip Duration ${tripDuration} days`;
+    tripDurationDiv.innerHTML = text;
+    tripDurationDiv.classList.add('weather-detail-trip-duration');
 
     const detail = document.createElement('div');
-    detail.appendChild(location);
-    detail.appendChild(temp);
-    detail.appendChild(description);
-    detail.appendChild(precip);
-    detail.appendChild(humidity);
-    detail.appendChild(travelDate);
+    detail.appendChild(locationDiv);
+    detail.appendChild(tempDiv);
+    detail.appendChild(descriptionDiv);
+    detail.appendChild(precipDiv);
+    detail.appendChild(humidityDiv);
+    detail.appendChild(travelStartDateDiv);
+    detail.appendChild(travelEndDateDiv);
+    detail.appendChild(tripDurationDiv);
     
     const weatherImage = document.createElement('div');
     text = `<img src=https://www.weatherbit.io/static/img/icons/${weatherData.data.weather.icon}.png>`;

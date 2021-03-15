@@ -5,26 +5,28 @@
     margin: $margin_8px;
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     #destination {
-        line-height: 1.5;
+        line-height: 1.2;
         padding: $padding_8px;
         font-size: 1.25em;
-        border-radius: 0.5em;
+        border-radius: $border-radius-value;
+        margin-right: 32px;
     }
 
     .date-picker-class {
         font-size: 1.25em;
         padding: $padding_8px;
-        border-radius: 0.5em;
+        border-radius: $border-radius-value;
+        margin-right: 32px;
     }
 
     #submit-button {
         padding: $padding_8px;
         font-size: 1.25em;
-        border-radius: 0.5em;
+        border-radius: $border-radius-value;
         background: $submit-btn-background;
 
         
@@ -34,4 +36,3 @@
     }
 
 }
-

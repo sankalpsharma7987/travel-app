@@ -1,4 +1,5 @@
 const $DATE_ELEMENT = document.querySelector('#date-picker');
+const $END_DATE_ELEMENT = document.querySelector('#end-date-picker');
 
 const setDatePickerValue = ()=>{
 
@@ -50,6 +51,10 @@ const setDatePickerValue = ()=>{
     $DATE_ELEMENT.min = currentDate;
     $DATE_ELEMENT.value = currentDate;
     $DATE_ELEMENT.max = futureDate;
+
+    $END_DATE_ELEMENT.min = currentDate;
+    $END_DATE_ELEMENT.value = currentDate;
+    $END_DATE_ELEMENT.max = futureDate;
 
 }
 

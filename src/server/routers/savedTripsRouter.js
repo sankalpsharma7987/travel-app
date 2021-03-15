@@ -8,7 +8,12 @@ router.post('/saveTrip',(req,res)=>{
     if(req.body)
     {
         id += 1;
-        const trip = {location:req.body.location,date:req.body.date,id};
+        const trip = {
+            location: req.body.location,
+            startDate: req.body.startDate,
+            endDate: req.body.endDate,
+            id
+        };
         savedTrips[id] = trip;
         res.send(savedTrips)
     }
