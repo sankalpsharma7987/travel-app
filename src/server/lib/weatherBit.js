@@ -52,7 +52,12 @@ const mockWeatherBitForecastAPI = ({latitude,longitude},callback)=>{
                 }
                 ))
 
-                callback(undefined,{data,city_name:`${body.city_name}`});
+                callback(undefined,{
+                    data,cityName:`${body.city_name}`,
+                    stateCode: `${body.state_code}`,
+                    countryCode: `${body.country_code}`
+
+            });
 
             }
 
@@ -113,7 +118,11 @@ const mockWeatherBitCurrentAPI = ({latitude,longitude},callback)=>{
 
                 }
 
-                callback(undefined,{data,city_name:`${body.data[0].city_name}`});
+                callback(undefined,{
+                    data,cityName:`${body.data[0].city_name}`,
+                    stateCode:`${body.data[0].state_code}`,
+                    countryCode:`${body.data[0].country_code}`
+                });
 
             }
 

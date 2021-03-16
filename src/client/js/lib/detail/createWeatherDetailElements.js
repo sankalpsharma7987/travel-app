@@ -5,7 +5,7 @@ const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePic
     const weatherDetail = document.createElement('div');
 
     const locationDiv = document.createElement('div');
-    let text= `Weather for ${weatherData.city_name}`;
+    let text= `Weather for ${weatherData.cityName}`;
     locationDiv.innerHTML = text;
     locationDiv.classList.add('weather-detail-location');
     
