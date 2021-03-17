@@ -17,6 +17,7 @@ import { fetchCountryImage } from './js/lib/locationImage/fetchCountryImage';
 import { fetchLocationImage } from './js/lib/locationImage/fetchLocationImage';
 import { updateLocationImage } from './js/lib/locationImage/updateLocationImage';
 import { updateLocationImageUI } from './js/lib/locationImage/updateLocationImageUI';
+import { changeEndDatePicker } from './js/lib/changeEndDatePicker';
 
 import { clearUI } from './js/lib/clearUI';
 import { calculateDateDiffDays } from './js/lib/calculateDateDiffDays';
@@ -49,4 +50,4 @@ export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWea
     clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,showWeatherSummary,
     clearSaveTripUI,createSaveTripElement,deleteSavedTrip,getTripData,
     loadTripData,
-    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip };
+    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip,changeEndDatePicker };
