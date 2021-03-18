@@ -12,20 +12,20 @@ import { createWeatherDetailElements } from './js/lib/detail/createWeatherDetail
 import { updateWeatherDetail } from './js/lib/detail/updateWeatherDetail';
 
 import { clearLocationImageUI} from './js/lib/locationImage/clearLocationImageUI';
-import { createErrorElement } from './js/lib/createErrorElement';
+import { createErrorElement } from './js/lib/error/createErrorElement';
 import { createLocationImageElements} from './js/lib/locationImage/createLocationImageElements';
 import { fetchCountryImage } from './js/lib/locationImage/fetchCountryImage';
 import { fetchLocationImage } from './js/lib/locationImage/fetchLocationImage';
-import { updateErrorUI } from './js/lib/updateErrorUI';
+import { updateErrorUI } from './js/lib/error/updateErrorUI';
 import { updateLocationImage } from './js/lib/locationImage/updateLocationImage';
 import { updateLocationImageUI } from './js/lib/locationImage/updateLocationImageUI';
-import { changeEndDatePicker } from './js/lib/changeEndDatePicker';
+import { changeEndDatePicker } from './js/lib/misc/changeEndDatePicker';
 
-import { clearUI } from './js/lib/clearUI';
-import { clearErrorUI } from './js/lib/clearErrorUI';
-import { calculateDateDiffDays } from './js/lib/calculateDateDiffDays';
-import { getTravelData } from './js/lib/getTravelData';
-import { setDatePickerValue } from './js/lib/setDatePickerValue';
+import { clearUI } from './js/lib/misc/clearUI';
+import { clearErrorUI } from './js/lib/error/clearErrorUI';
+import { calculateDateDiffDays } from './js/lib/misc/calculateDateDiffDays';
+import { getTravelData } from './js/lib/misc/getTravelData';
+import { setDatePickerValue } from './js/lib/misc/setDatePickerValue';
 import { showWeatherSummary } from './js/lib/summary/showWeatherSummary';
 
 import { clearSaveTripUI } from './js/lib/trip/clearSaveTripUI';

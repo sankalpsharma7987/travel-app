@@ -6,8 +6,8 @@ const fetchCountryImage = async(countryCode)=>{
         return data.flag;
     }
     catch(e)
-    {
-        console.log(e);
+    {   
+        Client.updateErrorUI();
     }
     
 }
