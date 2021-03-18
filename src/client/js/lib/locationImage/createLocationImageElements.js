@@ -1,10 +1,11 @@
 const createLocationImageElements = (imageData)=>{
 
-    const locationImage = document.createElement('div');
-    let text = `<img src=${imageData.webformatURL}>`;
-    locationImage.innerHTML = text;
+    const locationImage = document.createElement('img');
+    // let text = `<img src=${imageData.webformatURL}>`;
+    locationImage.setAttribute('src',imageData.webformatURL);
+    // locationImage.innerHTML = text;
 
-    locationImage.classList.add('location')
+    // locationImage.classList.add('location')
 
     const fragment = document.createDocumentFragment();
     fragment.appendChild(locationImage);

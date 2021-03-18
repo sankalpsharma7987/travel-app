@@ -3,6 +3,7 @@
 .form-section {
     padding: $padding_8px;
     margin: $margin_8px;
+    grid-area: form;
     display: flex;
     flex-flow: row;
     justify-content: center;

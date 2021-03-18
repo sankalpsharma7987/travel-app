@@ -5,6 +5,9 @@
     grid-area: detail;
     flex-flow: row;
     justify-content: space-between;
+    align-items: flex-start;
+    grid-template-areas: 
+    "detail-info detail-info detail-info location-image location-image location-image";
     margin: $margin_8px;
     padding: $padding_8px;
 }
@@ -12,9 +15,26 @@
 .weather-detail {
     display: flex;
     flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-area: detail-info;
     padding: $padding_8px;
     margin: $margin_8px;
 
+    img {
+        max-height: 100px;
+        max-width: 100px;
+    }
+
+}
+
+.location-image {
+    grid-area: location-image;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
