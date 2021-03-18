@@ -1,6 +1,8 @@
 #user-section {
     display: flex;
     flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
     grid-area: user;
     grid-template-areas:
     'form form form form form form form form form form';

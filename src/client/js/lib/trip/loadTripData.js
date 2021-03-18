@@ -1,3 +1,4 @@
+const $ERROR_ELEMENT = document.querySelector('.error-section');
 const loadTripData = async()=>{
 
     try {
@@ -7,7 +8,8 @@ const loadTripData = async()=>{
     }
     catch(e)
     {
-        console.log(e);
+        // console.log(e);
+        Client.updateErrorUI();
     }
 
 }

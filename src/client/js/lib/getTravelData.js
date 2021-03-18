@@ -1,3 +1,5 @@
+const e = require("cors");
+
 const $INPUT_ELEMENT = document.querySelector('#destination');
 const $SUBMIT_BUTTON = document.querySelector('#submit-button');
 const $DATE_ELEMENT = document.querySelector('#date-picker');
@@ -14,7 +16,7 @@ const getTravelData = async()=> {
     let tripDuration = Client.calculateDateDiffDays(startDatePickerValue,endDatePickerValue)
     let weatherDataType = dayDiff>=6?'forecast':'current'
 
-
+    Client.clearErrorUI();
     Client.clearSummaryUI();
     Client.clearDetailUI();
     Client.clearLocationImageUI();
@@ -50,7 +52,7 @@ const getTravelData = async()=> {
                 }
 
             )
-        )
+        ).catch(e=>Client.updateErrorUI(e));
 
 
     }
@@ -70,7 +72,7 @@ const getTravelData = async()=> {
             Client.fetchLocationImage($INPUT_ELEMENT.value).then(
                 data=> {
                     if(data.error === 'Could not find image for this location')
-                    {
+                    {   
                         Client.fetchCountryImage(countryCode).then(data=>Client.updateLocationImageUI({webformatURL:data}));
                     }
                     else {
@@ -78,8 +80,9 @@ const getTravelData = async()=> {
                     }
                 }
 
-            )
-        )
+            ).catch(e=>Client.updateErrorUI())
+
+        ).catch(e=>Client.updateErrorUI());
 
     }
 
