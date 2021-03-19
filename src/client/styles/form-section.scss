@@ -4,17 +4,36 @@
     padding: $padding_8px;
     margin: $margin_8px;
     grid-area: form;
-    display: flex;
+    display: grid;
     flex-flow: row;
-    justify-content: center;
+    grid-gap: 0.5em;
+    grid-template-areas: "dest start-date end-date btn";
+    justify-content: stretch;
     align-items: center;
+    padding: 8px;
+
+    .start-date-class {
+        display: flex;
+        flex-flow: row;
+        grid-area: start-date;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .end-date-class {
+        display: flex;
+        flex-flow: row;
+        grid-area: end-date;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
     #destination {
         line-height: 1.2;
         padding: $padding_8px;
         font-size: 1.25em;
+        grid-area: dest;
         border-radius: $border-radius-value;
-        margin-right: 32px;
         text-align: center;
     }
 
@@ -22,12 +41,12 @@
         font-size: 1.25em;
         padding: $padding_8px;
         border-radius: $border-radius-value;
-        margin-right: 32px;
     }
 
     #submit-button {
         padding: $padding_8px;
         font-size: 1.25em;
+        grid-area: btn;
         border-radius: $border-radius-value;
         background: $submit-btn-background;
 

@@ -6,12 +6,12 @@
     flex-flow: column;
     align-items: stretch;
     justify-content:flex-start;
+    overflow: auto;
 }
 
 .weather-summary {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr;
-    grid-auto-rows: 75px;
     grid-template-areas: "date temp descrip cloud precip";
     grid-gap: 0.5em;
     padding: $padding_8px;
@@ -53,10 +53,6 @@
     &-precip {
         grid-area: precip;
     }
-}
-
-.weather-description {
-    font-size:1.5em;
 }
 
 .hide-weather-summary{

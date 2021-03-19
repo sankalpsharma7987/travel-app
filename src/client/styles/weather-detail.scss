@@ -28,12 +28,21 @@
 
 }
 
+.weather-detail-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .location-image {
     grid-area: location-image;
 
     img {
         width: 100%;
         height: 100%;
+        max-width: 500px;
+        max-height: 500px;
     }
 }
 

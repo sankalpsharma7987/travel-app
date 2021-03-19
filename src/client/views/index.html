@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Travel App</title>
-
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300;1,400&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
     </head>
 
     
@@ -23,10 +25,21 @@
             <section id="user-section" class="box1">
    
                     <div class="form-section">
-                        <input type="text" placeholder="Enter your destination" id="destination">
-                        <input type="date" id="date-picker" class="date-picker-class">
-                        <input type="date" id="end-date-picker" class="date-picker-class">
+                        
+                        <input type="text" placeholder="Enter your destination" id="destination" autofocus>
+
+                        <div class="start-date-class">
+                            <label id="start-date-label"> From </label>
+                            <input type="date" id="date-picker" class="date-picker-class">
+                        </div>
+                        
+                        <div class="end-date-class">
+                            <label id="end-date-label"> To </label>
+                            <input type="date" id="end-date-picker" class="date-picker-class">
+                        </div>
+
                         <button id="submit-button"> Plan My Trip </button>
+
                     </div>
                     
                     <div class="error-section">
