@@ -1,13 +1,27 @@
+@import './global-variables.scss';
+
 .header {
     &-section {
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: center;
+        // background: rgba(164,235,239,255);
+        // background-image: linear-gradient(to right,rgb(255,255,255),rgb(191,240,245));
+        // background-image: linear-gradient(to right,rgb(90,203,219),rgb(255,255,255),rgb(105,213,225),rgb(82,197,215));
+        background-image: linear-gradient(to right,rgba(82,197,215,255),rgb(255,255,255),rgba(82,197,215,255));
+        border-bottom: 0.25px white;
     }
 
     &-class {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        color: $submit-btn-background;
+
         h1 {
             font-size: 3em;
+            font-family: cursive;
         }
     }
 }

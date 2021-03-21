@@ -1,10 +1,45 @@
+@import './global-variables.scss';
+
 #user-section {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     grid-area: user;
     grid-template-areas:
-    'form form form form form form form form form form';
+    'detail detail detail detail detail detail detail detail detail detail';
     grid-gap: 0.8em;
+    background: white;
+    padding: $padding_8px;
+    background: $image_background url('../images/fantasy-3502188_1920.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+// }
+
+
+// .content-section {
+//     display: flex;
+//     flex-flow: column wrap;
+//     grid-area: page-content;
+//     justify-content: flex-start;
+//     align-items: center;
+//     color: white;
+
+//     h1 {
+//         font-size: 3em;
+//         font-family: cursive;
+//     }
+
+// }
+
+.detail-section {
+    display: flex;
+    flex-flow: column;
+    grid-area: detail;
+    grid-template-areas: "form form form form form"
+    "error error error error error";
+    background: white;
+    border: 1px solid rgb(193, 201, 209);
+    border-radius: $border-radius-value;
+
 }

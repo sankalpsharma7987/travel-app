@@ -17,66 +17,79 @@
         <header class="header-section">
             <div class="header-class">
                 <h1> Trip Planner </h1>
+                <h4> Simplied Way to Plan Your Trip </h4>
             </div>
         </header>
 
         <main id = "container">
+            
+                <section id="user-section">
+<!--                     
+                    <div class="content-section box1">
+                            <h1> Trip Planner </h1>
+                            <h4> Simplified Way to Plan Your Trip</h4>
+                    </div> -->
 
-            <section id="user-section" class="box1">
-   
-                    <div class="form-section">
+                    <div class = "detail-section">
                         
-                        <input type="text" placeholder="Enter your destination" id="destination" autofocus>
+                        <div class="form-section">
+                            
+                            <input type="text" placeholder="Enter your destination" id="destination" autofocus>
 
-                        <div class="start-date-class">
-                            <label id="start-date-label"> From </label>
-                            <input type="date" id="date-picker" class="date-picker-class">
+                            <div class="start-date-class">
+                                <label id="start-date-label"> From </label>
+                                <input type="date" id="date-picker" class="date-picker-class">
+                            </div>
+                            
+                            <div class="end-date-class">
+                                <label id="end-date-label"> To </label>
+                                <input type="date" id="end-date-picker" class="date-picker-class">
+                            </div>
+
+                            <button id="submit-button"> Plan My Trip </button>
+
                         </div>
                         
-                        <div class="end-date-class">
-                            <label id="end-date-label"> To </label>
-                            <input type="date" id="end-date-picker" class="date-picker-class">
+                        <div class="error-section" >
+
                         </div>
 
-                        <button id="submit-button"> Plan My Trip </button>
-
                     </div>
-                    
-                    <div class="error-section">
+                       
 
-                    </div>
-                    
-            </section>    
+                        
+                </section>    
 
-            <section id="saved-trip-section" class="box1">
+                <section id="saved-trip-section" class="box1">
 
-                <div class="saved-trip-heading"> My Trips </div>
-                <div class="saved-trips">
-                </div>
-
-            </section>
-
-            <section id="location-section" class="box1">
-
-                <div class="weather-detail-section">
-
-                    <div class="weather-detail">
-                        <!-- <h1> Weather Detail </h1> -->
+                    <div class="saved-trip-heading"> My Trips </div>
+                    <div class="saved-trips">
                     </div>
 
-                    <div class="location-image">
+                </section>
+
+                <section id="location-section" class="box1">
+
+                    <div class="weather-detail-section">
+
+                        <div class="weather-detail">
+                            <!-- <h1> Weather Detail </h1> -->
+                        </div>
+
+                        <div class="location-image">
+
+                        </div>
 
                     </div>
 
-                </div>
+                    <div class="weather-summary-section">
 
-                <div class="weather-summary-section">
-
-                </div>
+                    </div>
 
 
-            </section>
-
+                </section>
+                
+            
         </main>
 
         <footer>

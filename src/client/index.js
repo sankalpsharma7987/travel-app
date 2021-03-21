@@ -38,17 +38,15 @@ import { updateSaveTripUI } from './js/lib/trip/updateSaveTripUI';
 import { saveTrip } from './js/lib/trip/saveTrip';
 import { removeSavedTrip } from './js/lib/trip/removeSavedTrip';
 
-
-
 import './styles/base.scss';
-import './styles/weather-summary.scss';
+import './styles/error-section.scss';
+import './styles/form-section.scss';
+import './styles/header-section.scss';
 import './styles/location-section.scss';
+import './styles/saved-trip-section.scss';
 import './styles/user-section.scss';
 import './styles/weather-detail.scss';
-import './styles/form-section.scss';
-import './styles/saved-trip-section.scss';
-import './styles/header-section.scss';
-import './styles/error-section.scss';
+import './styles/weather-summary.scss';
 
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,

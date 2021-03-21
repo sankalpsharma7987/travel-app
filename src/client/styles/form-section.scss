@@ -4,13 +4,14 @@
     padding: $padding_8px;
     margin: $margin_8px;
     grid-area: form;
-    display: grid;
-    flex-flow: row;
+    display: flex;
+    flex-flow: column;
     grid-gap: 0.5em;
     grid-template-areas: "dest start-date end-date btn";
-    justify-content: stretch;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
     padding: 8px;
+    grid-gap: 0.5em;
 
     .start-date-class {
         display: flex;
@@ -35,12 +36,14 @@
         grid-area: dest;
         border-radius: $border-radius-value;
         text-align: center;
+        background: $card-background;
     }
 
     .date-picker-class {
         font-size: 1.25em;
         padding: $padding_8px;
         border-radius: $border-radius-value;
+        background: $card-background;
     }
 
     #submit-button {
@@ -49,7 +52,7 @@
         grid-area: btn;
         border-radius: $border-radius-value;
         background: $submit-btn-background;
-
+        color: white;
         
         &:hover{
             cursor: pointer;
