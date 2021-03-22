@@ -40,15 +40,16 @@
         border-radius: $border-radius-value;
         text-align: center;
         background: $card-background;
+        border-style: none;
     }
 
     .date-picker-class {
         font-size: 1.25em;
         padding: $padding_8px;
         border-radius: $border-radius-value;
+        border-style: none;
         border-color: white;
         background: $card-background;
-        border: inherit;
     }
 
     #submit-button {
@@ -56,9 +57,9 @@
         font-size: 1.25em;
         grid-area: btn;
         border-radius: $border-radius-value;
+        border-style: none;
         border-color: white;
         background: $submit-btn-background;
-        border: inherit;
         color: white;
         
         &:hover{
