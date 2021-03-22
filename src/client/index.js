@@ -48,6 +48,8 @@ import './styles/user-section.scss';
 import './styles/weather-detail.scss';
 import './styles/weather-summary.scss';
 
+import './images/travel-4548127_640.png';
+
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,
     fetchCountryImage,fetchLocationImage,updateLocationImage,updateLocationImageUI,

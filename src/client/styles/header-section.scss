@@ -5,22 +5,31 @@
         display: flex;
         flex-flow: row;
         justify-content: center;
-        // background: rgba(164,235,239,255);
-        // background-image: linear-gradient(to right,rgb(255,255,255),rgb(191,240,245));
-        // background-image: linear-gradient(to right,rgb(90,203,219),rgb(255,255,255),rgb(105,213,225),rgb(82,197,215));
-        background-image: linear-gradient(to right,rgba(82,197,215,255),rgb(255,255,255),rgba(82,197,215,255));
-        border-bottom: 0.25px white;
+        background-image : linear-gradient(to bottom, rgba(85,200,218,255),rgba(255,255,255,255),rgba(85,200,218,255));
+        border-bottom: 1px solid rgba(85,200,218,255);
+    }
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 75px;
+            height: 75px;
+            max-height: 100%;
+            max-width: 100%;
+        }
     }
 
     &-class {
         display: flex;
         flex-flow: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        justify-content: center;
+        align-items: center;
         color: $submit-btn-background;
 
         h1 {
-            font-size: 3em;
+            font-size: 4em;
             font-family: cursive;
         }
     }

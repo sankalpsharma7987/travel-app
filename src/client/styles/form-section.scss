@@ -8,32 +8,35 @@
     flex-flow: column;
     grid-gap: 0.5em;
     grid-template-areas: "dest start-date end-date btn";
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: stretch;
     padding: 8px;
-    grid-gap: 0.5em;
+    grid-gap: 1em;
 
     .start-date-class {
         display: flex;
         flex-flow: row;
         grid-area: start-date;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
+
+
     }
 
     .end-date-class {
         display: flex;
         flex-flow: row;
         grid-area: end-date;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
     }
-
+        
     #destination {
         line-height: 1.2;
         padding: $padding_8px;
         font-size: 1.25em;
         grid-area: dest;
+        border-color: white;
         border-radius: $border-radius-value;
         text-align: center;
         background: $card-background;
@@ -43,7 +46,9 @@
         font-size: 1.25em;
         padding: $padding_8px;
         border-radius: $border-radius-value;
+        border-color: white;
         background: $card-background;
+        border: inherit;
     }
 
     #submit-button {
@@ -51,7 +56,9 @@
         font-size: 1.25em;
         grid-area: btn;
         border-radius: $border-radius-value;
+        border-color: white;
         background: $submit-btn-background;
+        border: inherit;
         color: white;
         
         &:hover{

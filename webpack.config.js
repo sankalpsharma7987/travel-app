@@ -31,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.png|jpg$/,
-                // include: path.join(__dirname, './src/client/images/'),
+                include: path.join(__dirname, './src/client/images/'),
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
