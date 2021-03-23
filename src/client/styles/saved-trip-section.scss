@@ -11,10 +11,15 @@
 
 .saved {
     &-trip-heading {
+        display: none;
         padding: $padding_8px;
         text-align: center;
         margin: $margin_8px;
         font-size: 1.25em;
+
+        &-display {
+            display: block;
+        }
     }
 
     &-trips {
