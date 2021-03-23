@@ -10,6 +10,13 @@
     "detail-info detail-info detail-info location-image location-image location-image";
     margin: $margin_8px;
     padding: $padding_8px;
+
+    
+
+    &-background {
+        background: $card-background;
+        border-radius: $border-radius-value;
+    }
 }
 
 .weather-detail {
@@ -43,6 +50,7 @@
         height: 100%;
         max-width: 500px;
         max-height: 500px;
+        border-radius: $border-radius-value;
     }
 }
 

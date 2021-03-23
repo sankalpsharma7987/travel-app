@@ -27,54 +27,77 @@
 
     &-trip {
         display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "date location daysRemaining closebox";
+        grid-template-areas: "date location daysRemaining removeTrip";
         grid-gap: 0.5em;
         padding: $padding_8px;
         margin: $margin_8px;
         border-top: 1px solid rgb(193, 201, 209);
         border-radius: $border-radius-value;
-        background: $card-background;
+        background: $save-trip-background;
 
-    }
+        &-date {
+            display: flex;
+            grid-area: date;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
 
-    &-trip-date {
-        display: flex;
-        grid-area: date;
-        flex-flow: row;
-        justify-content: center;
-        align-items: center;
+        &-daysRemaining {
+            display: flex;
+            grid-area: daysRemaining;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
 
-    }
+        &-location {
+            display: flex;
+            grid-area: location;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+    
+        }
 
-    &-trip-location {
-        display: flex;
-        grid-area: location;
-        flex-flow: row;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    &-trip-daysRemaining {
-        display: flex;
-        grid-area: daysRemaining;
-        flex-flow: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &-trip-remove {
-        display: flex;
-        grid-area: closebox;
-        flex-flow: row;
-        justify-content: stretch;
-        align-items: center;
-        &:hover {
-            cursor: pointer;
-            background: lightslategray;
+        &-remove {
+            display: flex;
+            padding: $padding_8px;
+            grid-area: removeTrip;
+            border-radius: $border-radius-value;
+            background: $submit-btn-background;
+            color: white;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                cursor: pointer;
+                background: $remove-btn-hover-background;
+                color: black;
+            }
+    
         }
 
     }
 
 }
+
+.save-trip-btn {
+    background: $submit-btn-background;
+    color: white;
+    font-size: 1.5em;
+    border-radius: $border-radius-value;
+    border-style: none;
+    border-color: white;
+
+    &:hover {
+        cursor: pointer;
+        color: black;
+        background: $form-background;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+

@@ -69,7 +69,7 @@ const createSaveTripElement = (data) => {
     days.classList.add('saved-trip-daysRemaining');
 
     const closeBox = document.createElement('div');
-    text = 'Remove';
+    text = 'Remove Trip';
     closeBox.innerHTML = text;
     closeBox.classList.add('saved-trip-remove');
     closeBox.setAttribute('id',data.id);
