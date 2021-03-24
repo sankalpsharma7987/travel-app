@@ -12,6 +12,7 @@ import { createWeatherDetailElements } from './js/lib/detail/createWeatherDetail
 import { updateWeatherDetail } from './js/lib/detail/updateWeatherDetail';
 
 import { changeEndDatePicker } from './js/lib/misc/changeEndDatePicker';
+import { enableLocationImageModal,disableLocationImageModal } from './js/lib/misc/locationImageModalBehavior';
 import { clearLocationImageUI} from './js/lib/locationImage/clearLocationImageUI';
 import { createErrorElement } from './js/lib/error/createErrorElement';
 import { createLocationImageElements} from './js/lib/locationImage/createLocationImageElements';
@@ -50,6 +51,7 @@ import './styles/user-section.scss';
 import './styles/weather-detail.scss';
 import './styles/weather-summary.scss';
 import './styles/footer-section.scss';
+import './styles/image-modal.scss';
 
 import './images/travel-4548127_640.png';
 
@@ -59,4 +61,4 @@ export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWea
     clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,showWeatherSummary,
     clearSaveTripUI,createSaveTripElement,deleteSavedTrip,getTripData,
     loadTripData,
-    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip, createErrorElement, changeEndDatePicker, clearErrorUI,updateErrorUI,scrollTopArrow,stickyHeaderSection };
+    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip, createErrorElement, changeEndDatePicker, clearErrorUI,updateErrorUI,scrollTopArrow,stickyHeaderSection,enableLocationImageModal,disableLocationImageModal };
