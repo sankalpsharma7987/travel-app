@@ -25,7 +25,8 @@ h1 {
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-areas: "user user user user user user user user user user"
-                         "trip trip trip trip location location location location location location";
-    grid-template-rows: 400px auto;
+                         "trip trip trip trip location location location location location location"
+                         "ft ft ft ft ft ft ft ft ft ft";
+    grid-template-rows: 400px auto auto;
     justify-content: center;
 }

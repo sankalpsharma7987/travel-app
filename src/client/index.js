@@ -47,6 +47,7 @@ import './styles/saved-trip-section.scss';
 import './styles/user-section.scss';
 import './styles/weather-detail.scss';
 import './styles/weather-summary.scss';
+import './styles/footer-section.scss';
 
 import './images/travel-4548127_640.png';
 

@@ -44,6 +44,7 @@
 
         &:focus {
             outline: none;
+            border: $border-focus-value;
         }
     }
 
@@ -57,6 +58,7 @@
 
         &:focus {
             outline: none;
+            border: $border-focus-value;
         }
     }
 

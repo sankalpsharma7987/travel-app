@@ -23,61 +23,38 @@
     }
 
     &-trips {
-        display: flex;
-        flex-flow: column;
-        align-items: stretch;
-        justify-content: flex-start;
-
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 150px;
+        grid-auto-rows: 150px;
+        grid-gap: 0.5em;
     }
 
     &-trip {
-        display: grid;
-        grid-template-areas: "date location daysRemaining removeTrip";
+        display: flex;
+        flex-flow: column; 
+        justify-content: center;
+        align-items: center;
         grid-gap: 0.5em;
-        padding: $padding_8px;
         margin: $margin_8px;
         border-top: 1px solid rgb(193, 201, 209);
         border-radius: $border-radius-value;
         background: $save-trip-background;
+        width: 150px;
+        height: 135px;
 
-        &-date {
-            display: flex;
-            grid-area: date;
-            flex-flow: row;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        &-daysRemaining {
-            display: flex;
-            grid-area: daysRemaining;
-            flex-flow: row;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        &-location {
-            display: flex;
-            grid-area: location;
-            flex-flow: row;
-            justify-content: flex-start;
-            align-items: center;
-    
+        &-date, &-daysRemaining,&location {
+            display: block;
         }
 
         &-remove {
-            display: flex;
             padding: $padding_8px;
-            grid-area: removeTrip;
             border-radius: $border-radius-value;
             background: $submit-btn-background;
             color: white;
-            flex-flow: row;
-            justify-content: center;
-            align-items: center;
             &:hover {
                 cursor: pointer;
-                background: $remove-btn-hover-background;
+                background: $form-background;
                 color: black;
             }
     
@@ -94,6 +71,7 @@
     border-radius: $border-radius-value;
     border-style: none;
     border-color: white;
+    padding: 12px;
 
     &:hover {
         cursor: pointer;
@@ -105,4 +83,3 @@
         outline: none;
     }
 }
-
