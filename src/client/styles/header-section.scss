@@ -5,9 +5,17 @@
         display: flex;
         flex-flow: row;
         justify-content: center;
-        background-image : linear-gradient(to bottom, rgba(85,200,218,255),rgba(255,255,255,255),rgba(85,200,218,255));
-        border-bottom: 1px solid rgba(85,200,218,255);
+        background-image : $card-background;
+        border: none;
+
+        &-position {
+            position: sticky;
+            top: 0;
+            background: $form-background;
+        }
     }
+
+
 
     &-image {
         display: flex;

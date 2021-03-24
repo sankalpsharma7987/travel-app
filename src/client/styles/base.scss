@@ -30,3 +30,21 @@ h1 {
     grid-template-rows: 400px auto auto;
     justify-content: center;
 }
+
+.arrow-top {
+    position: fixed;
+    display: none;
+    bottom: 5%;
+    right: 2vw;
+    background: white;
+    border-radius: 50%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+
+    &-display {
+        display: block;
+    }
+}
