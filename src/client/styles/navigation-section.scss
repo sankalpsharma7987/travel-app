@@ -1,0 +1,91 @@
+@import './global-variables.scss';
+
+#navigation-section {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    padding: $padding_8px;
+    justify-content: flex-end;
+    background: $form-background;
+    & .navigation-items {
+        & .navigation-item{
+            color: $submit-btn-hover-background;
+            font-size: 1.25em;
+            justify-content: stretch;
+            margin: $margin_8px;
+            text-decoration: none;
+            &:hover {
+                background: $remove-btn-hover-background;
+                color: white;
+            }
+        }
+    }
+    
+}
+
+.navigation-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 100px;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    overflow: auto;
+    background: rgba($form-background,0.9);
+    cursor: pointer;
+    &-slide-in {
+        animation: navigation-modal-slide-in 0.6s ease-out;
+    }
+
+    &-slide-out {
+      animation: navigation-modal-slide-out 0.6s ease-out;
+    }
+
+    &-display {
+        display: block;
+    }
+    
+  }
+
+  @keyframes navigation-modal-slide-in {
+      from {
+          transform: translateX(-200px);
+        
+      }
+      to {
+          transform: translateX(0);
+      }
+
+  }
+
+
+  @keyframes navigation-modal-slide-out {
+    from {
+        transform: translateX(0);
+      
+    }
+    to {
+        transform: translateX(-200px);
+    }
+
+}  
+
+.navigation-burger {
+    &-items {
+        display: flex;
+        flex-flow: column;
+        justify-content: stretch;
+        cursor: pointer;
+        position: fixed;
+        top: 15px;
+        left: 10px;
+        padding: 0 $padding_8px;
+    }
+    &-item {
+        width: 1.5em;
+        height: 0.25em;
+        border-bottom: 0.2em solid $submit-btn-hover-background;
+    }
+}

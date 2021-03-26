@@ -41,6 +41,9 @@ import { updateSaveTripUI } from './js/lib/trip/updateSaveTripUI';
 import { saveTrip } from './js/lib/trip/saveTrip';
 import { removeSavedTrip } from './js/lib/trip/removeSavedTrip';
 
+import { showNavigationModal } from './js/lib/navigationBurger/showNavigationModal';
+import { hideNavigationModal } from './js/lib/navigationBurger/hideNavigationModal';
+
 import './styles/base.scss';
 import './styles/error-section.scss';
 import './styles/form-section.scss';
@@ -52,6 +55,7 @@ import './styles/weather-detail.scss';
 import './styles/weather-summary.scss';
 import './styles/footer-section.scss';
 import './styles/image-modal.scss';
+import './styles/navigation-section.scss';
 
 import './images/travel-4548127_640.png';
 
@@ -61,4 +65,5 @@ export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWea
     clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,showWeatherSummary,
     clearSaveTripUI,createSaveTripElement,deleteSavedTrip,getTripData,
     loadTripData,
-    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip, createErrorElement, changeEndDatePicker, clearErrorUI,updateErrorUI,scrollTopArrow,stickyHeaderSection,enableLocationImageModal,disableLocationImageModal };
+    postTripData,updateSaveTripUI,removeSavedTrip,saveTrip, createErrorElement, changeEndDatePicker, 
+    clearErrorUI,updateErrorUI,scrollTopArrow,stickyHeaderSection,enableLocationImageModal,disableLocationImageModal, showNavigationModal,hideNavigationModal };
