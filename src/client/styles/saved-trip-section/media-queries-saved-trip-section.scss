@@ -1,4 +1,8 @@
 @media screen and (max-width: 400px){
+    #saved-trip-section{
+        align-items: center;
+    }
+    
     .saved {
         &-trip-heading {
             font-size: 1em;
