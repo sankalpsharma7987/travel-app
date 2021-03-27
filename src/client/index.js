@@ -44,19 +44,33 @@ import { removeSavedTrip } from './js/lib/trip/removeSavedTrip';
 import { showNavigationModal } from './js/lib/navigationBurger/showNavigationModal';
 import { hideNavigationModal } from './js/lib/navigationBurger/hideNavigationModal';
 
-import './styles/base.scss';
-import './styles/error-section.scss';
-import './styles/form-section.scss';
-import './styles/header-section.scss';
-import './styles/location-section.scss';
-import './styles/saved-trip-section.scss';
-import './styles/user-section.scss';
-import './styles/weather-detail.scss';
-import './styles/weather-summary.scss';
+//SCSS Styling
+import './styles/base/base.scss';
+import './styles/user-section/error-section.scss';
+import './styles/form-section/form-section.scss';
+import './styles/header-section/header-section.scss';
+import './styles/location-section/location-section.scss';
+import './styles/location-section/weather-detail/weather-detail.scss';
+import './styles/location-section/weather-summary/weather-summary.scss';
+import './styles/saved-trip-section/saved-trip-section.scss';
+import './styles/user-section/user-section.scss';
+
+
 import './styles/footer-section.scss';
 import './styles/image-modal.scss';
 import './styles/navigation-section.scss';
 
+//Media Queries
+import './styles/base/media-queries-base.scss';
+import './styles/form-section/media-queries-form-section.scss';
+import './styles/header-section/media-queries-header-section.scss';
+import './styles/location-section/media-queries-location-section.scss';
+import './styles/location-section/weather-detail/media-queries-weather-detail.scss';
+import './styles/location-section/weather-summary/media-queries-weather-summary.scss';
+import './styles/saved-trip-section/media-queries-saved-trip-section.scss';
+
+
+//Images
 import './images/travel-4548127_640.png';
 
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,

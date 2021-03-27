@@ -1,0 +1,43 @@
+@media screen and (max-width: 400px){
+    .header{
+        &-section {
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-image{
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &-class {
+            h1{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px){
+    .header{
+        &-section {
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-image{
+            img {
+                width: 75px;
+                height: 50px;
+            }
+        }
+
+        &-class {
+            h1{
+                font-size: 1.5em;
+            }
+        }
+    }
+}

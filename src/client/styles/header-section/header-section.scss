@@ -1,4 +1,4 @@
-@import './global-variables.scss';
+@import '../global-variables.scss';
 
 .header {
     &-section {
@@ -11,6 +11,7 @@
         &-position {
             position: sticky;
             top: 0;
+            width: 100%;
             background: $form-background;
         }
     }

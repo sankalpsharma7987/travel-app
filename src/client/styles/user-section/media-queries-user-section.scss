@@ -1,0 +1,25 @@
+@media screen and(max-width: 400px){
+
+    #user-section {
+        grid-template-areas: "detail";
+    }
+
+    .detail-section {
+        grid-template-areas: "form"
+                             "error";   
+    }
+   
+}
+
+@media screen and(min-width: 401px) and (max-width: 600px){
+
+    #user-section {
+        grid-template-areas: "detail";
+    }
+
+    .detail-section {
+        grid-template-areas: "form"
+                             "error";   
+    }
+   
+}
