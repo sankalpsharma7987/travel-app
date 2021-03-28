@@ -57,7 +57,7 @@ import './styles/user-section/user-section.scss';
 
 
 import './styles/footer-section.scss';
-import './styles/image-modal.scss';
+import './styles/image-modal/image-modal.scss';
 import './styles/navigation-section.scss';
 
 //Media Queries
