@@ -44,6 +44,7 @@
     top: 0;
     width: 40%;
     height: 100%;
+    padding: $padding_8px*4;
     background: rgba($form-background,0.9);
     cursor: pointer;
     &-items {
