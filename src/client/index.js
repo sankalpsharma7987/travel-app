@@ -58,13 +58,14 @@ import './styles/user-section/user-section.scss';
 
 import './styles/footer-section.scss';
 import './styles/image-modal/image-modal.scss';
-import './styles/navigation-section.scss';
+import './styles/navigation-section/navigation-section.scss';
 
 //Media Queries
 import './styles/base/media-queries-base.scss';
 import './styles/form-section/media-queries-form-section.scss';
 import './styles/header-section/media-queries-header-section.scss';
 import './styles/location-section/media-queries-location-section.scss';
+import './styles/navigation-section/media-queries-navigation-section.scss';
 import './styles/location-section/weather-detail/media-queries-weather-detail.scss';
 import './styles/location-section/weather-summary/media-queries-weather-summary.scss';
 import './styles/saved-trip-section/media-queries-saved-trip-section.scss';
