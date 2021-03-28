@@ -45,7 +45,9 @@ const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePic
     const weatherImage = document.createElement('div');
     text = `<img src=https://www.weatherbit.io/static/img/icons/${weatherData.data.weather.icon}.png>`;
     weatherImage.innerHTML = text;
-    weatherImage.classList.add('weather-detail-image')
+    weatherImage.classList.add('weather-detail-image');
+    descriptionDiv.appendChild(weatherImage);
+    console.log(descriptionDiv);
 
     const saveTripButton = document.createElement('button');
     text = "Save Trip";
@@ -64,7 +66,6 @@ const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePic
     detailInfo.appendChild(travelStartDateDiv);
     detailInfo.appendChild(travelEndDateDiv);
     detailInfo.appendChild(tripDurationDiv);
-    detailInfo.appendChild(weatherImage);
     detailInfo.appendChild(saveTripButton);
     detailInfo.classList.add('weather-detail-info');
     
