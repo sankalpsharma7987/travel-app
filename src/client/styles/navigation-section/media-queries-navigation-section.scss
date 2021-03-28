@@ -11,10 +11,7 @@
     .navigation-modal {
 
         &-display {
-        display: flex;
-        flex-flow: column;
-        align-items: stretch;
-        justify-content: flex-start;
+            display: block;
         }
 
         &-slide-in {
