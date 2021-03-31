@@ -42,7 +42,7 @@ const getTravelData = async()=> {
                 }
                 
             ).then(
-                Client.updateLocationImageUI(undefined), //This function will be first called to render the spinning wheel image.
+                Client.updateLocationImageUI({webformatURL:'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'}), //This function will be first called to render the spinning wheel image.
                 Client.fetchLocationImage($INPUT_ELEMENT.value).then(
                     data=> {
                         if(data.error === 'Could not find image for this location')
@@ -72,7 +72,7 @@ const getTravelData = async()=> {
                 }
                 
             ).then(
-                Client.updateLocationImageUI(undefined), //This function will be first called to render the spinning wheel image.
+                Client.updateLocationImageUI({webformatURL:'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'}), //This function will be first called to render the spinning wheel image.
                 Client.fetchLocationImage($INPUT_ELEMENT.value).then(
                     data=> {
                         if(data.error === 'Could not find image for this location')
