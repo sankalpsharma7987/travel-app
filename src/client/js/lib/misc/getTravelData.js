@@ -42,7 +42,7 @@ const getTravelData = async()=> {
                 }
                 
             ).then(
-                Client.updateLocationImageUI(undefined),
+                Client.updateLocationImageUI(undefined), //This function is not getting called currently.
                 Client.fetchLocationImage($INPUT_ELEMENT.value).then(
                     data=> {
                         if(data.error === 'Could not find image for this location')
