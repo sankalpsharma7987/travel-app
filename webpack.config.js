@@ -30,7 +30,7 @@ module.exports = {
                 use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
             },
             {
-                test: /\.png|jpg$/,
+                test: /\.png|jpg|gif$/,
                 include: path.join(__dirname, './src/client/images/'),
                 loader: 'file-loader',
                 options: {

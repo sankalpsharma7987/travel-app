@@ -42,6 +42,7 @@ const getTravelData = async()=> {
                 }
                 
             ).then(
+                Client.updateLocationImageUI(undefined),
                 Client.fetchLocationImage($INPUT_ELEMENT.value).then(
                     data=> {
                         if(data.error === 'Could not find image for this location')

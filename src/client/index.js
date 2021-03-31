@@ -73,6 +73,7 @@ import './styles/saved-trip-section/media-queries-saved-trip-section.scss';
 
 //Images
 import './images/travel-4548127_640.png';
+import './images/spinning_wheel.gif';
 
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,
