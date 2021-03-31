@@ -1,34 +1,22 @@
-const $ERROR_ELEMENT = document.querySelector('.error-section');
 const updateLocationImageUI = async(imageData)=>{
 
-    if(imageData===undefined)
-    {   
-        console.log('Spinning');
-        const imageData ={};
-        imageData.webformatURL = './spinning_wheel.gif';
-        console.log(imageData);
-        alert('Image Loading...');
-        try {
+    try {
+        if(imageData===undefined)
+        {
+            const imageSpinningData = {};
+            // imageSpinningData.webformatURL = './spinning_wheel.gif';
+            imageSpinningData.webformatURL = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif';
+            Client.updateLocationImage(imageSpinningData);
+        }
+        else {
             Client.updateLocationImage(imageData);
         }
-        catch(e)
-        {
-            Client.updateErrorUI();
-        }
+
     }
 
-    else {
-        try {
-            // Client.clearDetailUI();
-            Client.updateLocationImage(imageData);
-        }
-    
-        catch(e)
-        {
-            // console.log(e); //Instead of rendering on the console, display the message as an error on the index.html
-            Client.updateErrorUI();
-        }
-        
+    catch(e)
+    {
+        Client.updateErrorUI(e);
     }
 
 
