@@ -39,6 +39,7 @@ import { loadTripData } from './js/lib/trip/loadTripData';
 import { postTripData } from './js/lib/trip/postTripData';
 import { updateSaveTripUI } from './js/lib/trip/updateSaveTripUI';
 import { saveTrip } from './js/lib/trip/saveTrip';
+import { validateDestinationInput } from './js/lib/validation/validateDestinationInput';
 import { removeSavedTrip } from './js/lib/trip/removeSavedTrip';
 
 import { showNavigationModal } from './js/lib/navigationBurger/showNavigationModal';
@@ -81,4 +82,5 @@ export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWea
     clearSaveTripUI,createSaveTripElement,deleteSavedTrip,getTripData,
     loadTripData,
     postTripData,updateSaveTripUI,removeSavedTrip,saveTrip, createErrorElement, changeEndDatePicker, 
-    clearErrorUI,updateErrorUI,scrollTopArrow,stickyHeaderSection,enableLocationImageModal,disableLocationImageModal, showNavigationModal,hideNavigationModal };
+    clearErrorUI,updateErrorUI,scrollTopArrow,stickyHeaderSection,enableLocationImageModal,disableLocationImageModal, showNavigationModal,hideNavigationModal,
+    validateDestinationInput };

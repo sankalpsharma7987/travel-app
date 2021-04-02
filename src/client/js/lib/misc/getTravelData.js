@@ -9,7 +9,7 @@ const getTravelData = async()=> {
     Client.clearErrorUI();
     
 
-    if($INPUT_ELEMENT.value!=='')
+    if(Client.validateDestinationInput($INPUT_ELEMENT.value))
     {
         Client.clearSummaryUI();
         Client.clearDetailUI();

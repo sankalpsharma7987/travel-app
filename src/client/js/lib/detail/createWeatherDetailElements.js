@@ -47,7 +47,6 @@ const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePic
     weatherImage.innerHTML = text;
     weatherImage.classList.add('weather-detail-image');
     descriptionDiv.appendChild(weatherImage);
-    console.log(descriptionDiv);
 
     const saveTripButton = document.createElement('button');
     text = "Save Trip";

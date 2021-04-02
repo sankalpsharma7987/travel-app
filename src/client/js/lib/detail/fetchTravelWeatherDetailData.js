@@ -1,5 +1,3 @@
-const $ERROR_ELEMENT = document.querySelector('.error-section');
-
 const fetchTravelWeatherDetailData = async(address)=>{
 
     try {
