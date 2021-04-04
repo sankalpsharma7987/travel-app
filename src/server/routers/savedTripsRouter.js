@@ -40,34 +40,32 @@ router.delete('/deleteTrip',(req,res)=>{
     
 
     try {
-        // console.log(savedTrips);
-        console.log(typeof savedTrips[id]);
+
         if(typeof savedTrips[id]==='undefined')
         {
-            throw new Error('No match found');
+            throw ('No match found');
         }
-        delete savedTrips[id];
         
-        console.log(savedTrips);
-
-        if(Object.keys(savedTrips).length>0) //Object.values return the array of keys of saved trips
-        {
-            res.send(savedTrips);
-        }
-
         else {
-            res.send({error:'No trips saved'});
-            
+
+            delete savedTrips[id];
+
+            if(Object.keys(savedTrips).length>0) //Object.values return the array of keys of saved trips
+            {
+                res.send(savedTrips);
+            }
+    
+            else {
+                res.send({error:'No trips saved'});
+                
+            }
+
         }
-
-        
-        
-
     }
 
     catch(e)
     {   
-        res.send({error:'No match found'});
+        res.send({error:e});
 
     }
 
