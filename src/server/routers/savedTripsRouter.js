@@ -41,7 +41,8 @@ router.delete('/deleteTrip',(req,res)=>{
 
     try {
         // console.log(savedTrips);
-        if(id<0)
+        console.log(typeof savedTrips[id]);
+        if(typeof savedTrips[id]==='undefined')
         {
             throw new Error('No match found');
         }
