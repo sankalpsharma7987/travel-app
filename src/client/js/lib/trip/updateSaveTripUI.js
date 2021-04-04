@@ -5,7 +5,7 @@ const updateSaveTripUI = (data)=>{
     
     Client.clearSaveTripUI();
     
-    if(!(data.error==='No trips saved'))
+    if(!(data.error==='No trips saved' || data.error === 'No match found'))
     {   
         const tripData = Object.values(data);
         tripData.forEach(data=>{
@@ -19,6 +19,13 @@ const updateSaveTripUI = (data)=>{
         }
         
 
+    }
+
+    else if(data.error === 'No match found')
+    {   
+        
+        Client.updateErrorUI('Cannot delete trip');
+        Client.loadTripData();
     }
 
     else {

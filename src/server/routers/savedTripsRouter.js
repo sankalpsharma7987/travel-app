@@ -40,8 +40,14 @@ router.delete('/deleteTrip',(req,res)=>{
     
 
     try {
-
+        // console.log(savedTrips);
+        if(id<0)
+        {
+            throw new Error('No match found');
+        }
         delete savedTrips[id];
+        
+        console.log(savedTrips);
 
         if(Object.keys(savedTrips).length>0) //Object.values return the array of keys of saved trips
         {
@@ -59,8 +65,7 @@ router.delete('/deleteTrip',(req,res)=>{
     }
 
     catch(e)
-    {
-        console.log(e);
+    {   
         res.send({error:'No match found'});
 
     }
