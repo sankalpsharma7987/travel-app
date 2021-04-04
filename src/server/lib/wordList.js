@@ -1,1 +1,0 @@
-const tagList = ['danger','earthquake','hurricane','flood','tsunami','tornado','bad',]

@@ -1,7 +1,15 @@
 const request = require('request');
 const apiKey = process.env.WEATHER_BIT_API_KEY;
 
+/* Created Library function to send API request to GeonName API to translate the address to latitude and longitude
+The console log message are added in the code in order to capture error messages at server side */
+
 const mockWeatherBitForecastAPI = ({latitude,longitude},callback)=>{
+
+    /* This function will send request to the WeatherBit API and will receive 15 day forecast for the latitude and longitude shared in the request.
+    The request cannot share more than 15 days of forecast as the free subscription provides only 15 days of data.
+    */
+
 
     let baseURL = process.env.WEATHER_BIT_FORECAST_URL;
    
@@ -74,6 +82,9 @@ const mockWeatherBitForecastAPI = ({latitude,longitude},callback)=>{
 
 
 const mockWeatherBitCurrentAPI = ({latitude,longitude},callback)=>{
+
+    /* This function will send request to the WeatherBit API and will receive current weather details for the latitude and longitude shared in the request.
+    */
 
     let baseURL = process.env.WEATHER_BIT_CURRENT_URL;
    

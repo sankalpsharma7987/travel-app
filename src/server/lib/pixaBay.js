@@ -1,6 +1,9 @@
-const apiKey = process.env.PIXA_BAY_API_KEY;
 const request = require('request');
+const apiKey = process.env.PIXA_BAY_API_KEY;
 const baseURL = process.env.PIXA_BAY_BASE_URL;
+
+/* Created Library function to send API request to PixaBay API to translate the fetch image details for the address location that user plans to visit
+ */
 
 const mockPixaBayAPI = (textValue,callback)=>{
     const url = `${baseURL}?key=${apiKey}&q=${textValue}`;
@@ -24,6 +27,7 @@ const mockPixaBayAPI = (textValue,callback)=>{
         }
 
     })
-    }
+
+}
 
 module.exports = { mockPixaBayAPI };

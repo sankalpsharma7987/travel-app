@@ -2,6 +2,8 @@ const request = require('request');
 const apiKey = process.env.GEONAME_API_KEY;
 const baseURL = process.env.GEONAME_BASE_URL;
 
+/* Created Library function to send API request to GeonName API to translate the address to latitude and longitude */
+
 const mockGeoNameAPI = (address,callback)=>{
 
     const url= `${baseURL}?q=${encodeURIComponent(address)}&username=${apiKey}`;

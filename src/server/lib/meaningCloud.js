@@ -1,8 +1,13 @@
+const request = require('request');
 const scoreTagArray = require('./scoreTagArray.js');
 const apiKey = process.env.MEANING_CLOUD_API_KEY;
 const baseURL = process.env.MEANING_CLOUD_BASE_URL;
 
-const request = require('request');
+/* Created Library function to send API request to MeaningCloud API to fetch sentiment score to every set of tag shared by the PixaBay API Response.
+    This is an additional API used in this project in order to find sentiments of  the tags, shared along with PixaBay API response object. 
+    The function accepts a textArray of pixabay api responses and then sends tag of individual response to meaningCloud API, to fetch the sentiments associated
+    with each string of tags. Hence an individual promise is returned for individual requests.
+ */
 
 const fetchMeaningCloudData = (textValue)=>{
 
@@ -45,7 +50,9 @@ const fetchMeaningCloudData = (textValue)=>{
 }
 
 const mockMeaningCloudAPI = async (textArray,callback)=>{
-    let sentimentArray = []
+
+    let sentimentArray = [];
+    
     try {
         for (let i =0; i<textArray.length;i++)
         {
@@ -56,10 +63,12 @@ const mockMeaningCloudAPI = async (textArray,callback)=>{
         
         callback(undefined,sentimentArray);
     }
+
         catch(e)
         {
             callback(e,undefined)
         }
+
 }
 
 module.exports = { mockMeaningCloudAPI };

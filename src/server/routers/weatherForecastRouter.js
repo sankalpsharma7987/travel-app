@@ -1,14 +1,13 @@
 const express = require('express');
-const path = require('path');
 
 const {mockWeatherBitForecastAPI,mockWeatherBitCurrentAPI} = require('../lib/weatherBit');
 const { mockGeoNameAPI } = require('../lib/geoName');
 
 const router = new express.Router();
 
-router.get('/',(req,res)=>{
-    res.sendFile(path.resolve('src/client/views/index.html'))
-})
+
+/*This router request will send the forecast of the query address shared. 
+The GeoName will be first translated and the latitude and longitude will be then shared to weatherBit API to retrieve the forecast*/
 
 router.get('/forecast',(req,res)=>{
 
@@ -39,6 +38,9 @@ router.get('/forecast',(req,res)=>{
 })
     
 router.get('/current',(req,res)=>{
+
+/*This router request will send the request of the query address to find current weather details
+The GeoName will be first translated and the latitude and longitude will be then shared to weatherBit API to retrieve the current weather details*/
 
     mockGeoNameAPI(req.query.address,(error,{latitude,longitude}={})=>{
 
