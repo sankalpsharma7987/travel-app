@@ -1,4 +1,4 @@
-const updateSummaryUI = async(weatherData)=>{
+const updateWeatherSummaryUI = async(weatherData)=>{
     try {
         // Client.clearSummaryUI();
         Client.updateWeatherSummary(weatherData.data);
@@ -12,4 +12,4 @@ const updateSummaryUI = async(weatherData)=>{
 
 }
 
-module.exports = { updateSummaryUI };
+module.exports = { updateWeatherSummaryUI };

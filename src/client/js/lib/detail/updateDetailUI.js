@@ -1,15 +1,21 @@
-const $ERROR_ELEMENT = document.querySelector('.error-section');
+/*Client-Side Javascript.
+This helper function is used to update weather details by sending the weatherdata fetched, the start date and end date and also the trip duration.
+If an error is observed during the update, then errorUI is updated with the error message.
+*/
 
 const updateDetailUI = async(weatherData,startDatePickerValue,endDatePickerValue,tripDuration)=>{
+
     try {
-        // Client.clearDetailUI();
+
         Client.updateWeatherDetail(weatherData,startDatePickerValue,endDatePickerValue,tripDuration);
+
     }
 
     catch(e)
     {
-        // console.log(e); //Instead of rendering on the console, display the message as an error on the index.html
+
         Client.updateErrorUI();
+
     }
 
 }

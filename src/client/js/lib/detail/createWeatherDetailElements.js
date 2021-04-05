@@ -1,3 +1,10 @@
+/*Client-Side Javascript. 
+This helper function is used to create elements to render in the weather detail section.
+The elements rendered are location, temperature, description of the weather, precipitation, humidity, travel start and end date.
+TripDuration is calculated and weather image icon, shared by weather bit api is also displayed.
+A save trip button is added in order to save the trip at the server.
+*/
+
 const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePickerValue,tripDuration)=>{
     
     const locationDiv = document.createElement('div');

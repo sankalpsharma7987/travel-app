@@ -1,3 +1,9 @@
+/*Client-Side Javascript.
+This helper function is used to create weather summary elements and return these elements to the calling function.
+Each summary element contains the date, temperature, cloud cover and precipitaton.It also contains image icon of the weather, shared by weather bit api.
+The elements are appended to a fragment object and returned to the calling function.
+*/
+
 const createWeatherSummaryElements = (data)=>{
 
     const fragment = document.createDocumentFragment();

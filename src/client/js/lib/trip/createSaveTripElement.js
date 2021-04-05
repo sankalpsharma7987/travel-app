@@ -1,3 +1,10 @@
+/*Client-Side Javascript
+This helper function is used to create save trip element.
+Each saved trip element consists of location, start date of the trip and days remaining for the trip.
+Each saved trip element also has an option to remove the saved trip.
+The saved trip element is then returned as a fragment object to the calling function.
+*/
+
 const createSaveTripElement = (data) => {
 
     const date = document.createElement('div');
@@ -68,11 +75,11 @@ const createSaveTripElement = (data) => {
     days.innerHTML = text;
     days.classList.add('saved-trip-daysRemaining');
 
-    const closeBox = document.createElement('div');
+    const removeTripButton = document.createElement('div');
     text = 'Remove Trip';
-    closeBox.innerHTML = text;
-    closeBox.classList.add('saved-trip-remove');
-    closeBox.setAttribute('id',data.id);
+    removeTripButton.innerHTML = text;
+    removeTripButton.classList.add('saved-trip-remove');
+    removeTripButton.setAttribute('id',data.id);
 
     const tripDetail = document.createElement('div');
     tripDetail.setAttribute('id',data.id);
@@ -80,7 +87,7 @@ const createSaveTripElement = (data) => {
     tripDetail.appendChild(date);
     tripDetail.appendChild(location);
     tripDetail.appendChild(days);
-    tripDetail.appendChild(closeBox);
+    tripDetail.appendChild(removeTripButton);
     tripDetail.classList.add('saved-trip');
 
     return tripDetail;

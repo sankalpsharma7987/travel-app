@@ -1,6 +1,6 @@
 import { clearSummaryUI } from './js/lib/summary/clearSummaryUI';
 import { fetchTravelWeatherSummaryData } from './js/lib/summary/fetchTravelWeatherSummaryData';
-import { updateSummaryUI } from './js/lib/summary/updateSummaryUI';
+import { updateWeatherSummaryUI } from './js/lib/summary/updateWeatherSummaryUI';
 import { createWeatherSummaryElements } from './js/lib/summary/createWeatherSummaryElements';
 import { updateWeatherSummary } from './js/lib/summary/updateWeatherSummary';
 
@@ -27,7 +27,7 @@ import { updateLocationImageUI } from './js/lib/locationImage/updateLocationImag
 import { clearUI } from './js/lib/misc/clearUI';
 import { clearErrorUI } from './js/lib/error/clearErrorUI';
 import { calculateDateDiffDays } from './js/lib/misc/calculateDateDiffDays';
-import { getTravelData } from './js/lib/misc/getTravelData';
+import { getTravelData } from './js/getTravelData';
 import { setDatePickerValue } from './js/lib/misc/setDatePickerValue';
 import { showWeatherSummary } from './js/lib/summary/showWeatherSummary';
 
@@ -75,7 +75,7 @@ import './styles/saved-trip-section/media-queries-saved-trip-section.scss';
 //Images
 import './images/travel-4548127_640.png';
 
-export { clearSummaryUI, fetchTravelWeatherSummaryData,updateSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
+export { clearSummaryUI, fetchTravelWeatherSummaryData,updateWeatherSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,
     fetchCountryImage,fetchLocationImage,updateLocationImage,updateLocationImageUI,
     clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,showWeatherSummary,

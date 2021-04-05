@@ -1,5 +1,9 @@
 const $WEATHER_SUMMARY_ELEMENT = document.querySelector('.weather-summary-section');
 
+/*Client-Side Javascript
+This helper function is used to toggle the display of the weather summary section.
+*/
+
 const showWeatherSummary = (flag)=>{
 
 

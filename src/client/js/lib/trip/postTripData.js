@@ -1,20 +1,13 @@
-const $ERROR_ELEMENT = document.querySelector('.error-section');
-const postTripData = async()=>{
+/*Client-Side Javascript
+This helper function is use to post the saved trip to the express server.
+The returned object from the express server is an updated set of objects.
+This data is then returned to the calling function.
+ */
 
-    const $LOCATION_VALUE = document.querySelector('.weather-detail-location');
-    const location = $LOCATION_VALUE.textContent.substring(11);
-    const travelStartDate = document.querySelector('.weather-detail-travel-start-date').textContent.substring(16);
-    const travelEndDate = document.querySelector('.weather-detail-travel-end-date').textContent.substring(13);
-    const tripDuration = document.querySelector('.weather-detail-trip-duration').textContent;
-    
-    const trip = { 
-        location: location,
-        startDate : travelStartDate,
-        endDate: travelEndDate,
-        tripDuration: tripDuration
-};
+const postTripData = async(trip)=>{
 
     try {
+        
         const res = await fetch(`http://localhost:3000/saveTrip`, {
             method: 'POST',
             headers: {
@@ -25,9 +18,11 @@ const postTripData = async()=>{
         const data = await res.json();
         return data;
     }
+
     catch(e){
-        // console.log(e);//Instead of rendering on the console, display the message as an error on the index.html
+
         Client.updateErrorUI();
+        
     }
 
 }

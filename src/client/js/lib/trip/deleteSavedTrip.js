@@ -1,8 +1,14 @@
-const $ERROR_ELEMENT = document.querySelector('.error-section');
+/*Client-Side Javascript
+This helper function is use to delete the saved trip at the express server.
+The returned object from the express server is an updated set of objects.
+The returned object is the updated list of saved trip.
+ */
+
 const deleteSavedTrip = async(id)=>{
 
     
     try {
+
         const res = await fetch(`http://localhost:3000/deleteTrip?id=${id}`, {
             method: 'DELETE',
             headers: {
@@ -11,10 +17,13 @@ const deleteSavedTrip = async(id)=>{
         })
         const data = await res.json();
         return data;
+
     }
+
     catch(e){
-        // console.log(e);//Instead of rendering on the console, display the message as an error on the index.html
+
         Client.updateErrorUI();
+
     }
 
 }

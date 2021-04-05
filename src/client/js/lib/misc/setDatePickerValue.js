@@ -1,6 +1,10 @@
 const $DATE_ELEMENT = document.querySelector('#date-picker');
 const $END_DATE_ELEMENT = document.querySelector('#end-date-picker');
 
+/* Client Side Javascript helper function to set the date value of the From and To datepicker.
+Date values are calcuated from the date object and are translated to strings, in order to set them as datepicker values for start and end date of the trip.
+ */
+
 const setDatePickerValue = ()=>{
 
     const dateVal = new Date();
