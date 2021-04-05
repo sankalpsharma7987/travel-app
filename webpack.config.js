@@ -13,9 +13,9 @@ module.exports = {
         library: 'Client'
     },
     mode: 'production',
-    devtool: 'source-map',
     optimization: {
-        minimizer: [new TerserPlugin({sourceMap:true}), new OptimizeCSSAssetsPlugin({})],
+        minimizer: [
+            new TerserPlugin({}),new OptimizeCSSAssetsPlugin({})],
         },
     module: {
         rules: [
