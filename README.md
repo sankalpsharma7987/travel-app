@@ -27,3 +27,5 @@ Following are the features implemented
 - Allow the user to remove the trip.
 - Instead of just pulling a single day forecast, pull the forecast for multiple days.
 - Incorporate weather icons into forecast from Weather Bit API.
+- Location Image is enlarged in a modal when clicked
+- Navigation Hamburger replaces the navigation section for small screen resolutions.
