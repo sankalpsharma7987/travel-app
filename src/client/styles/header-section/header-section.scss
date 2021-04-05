@@ -1,6 +1,7 @@
 @import '../global-variables.scss';
 
 .header {
+
     &-section {
         display: flex;
         flex-flow: row;
@@ -42,4 +43,5 @@
             font-family: cursive;
         }
     }
+    
 }

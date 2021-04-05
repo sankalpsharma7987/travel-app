@@ -1,6 +1,6 @@
-@media screen and(max-width: 600px)
-{
-    .navigation-desktop{
+@media screen and(max-width: 600px) {
+
+    .navigation-desktop {
         display: none;
     }
 
@@ -9,15 +9,12 @@
     }
 
     .navigation-modal {
-
         &-display {
             display: block;
         }
-
         &-slide-in {
             animation: navigation-modal-slide-in 0.6s ease-out;
         }
-    
         &-slide-out {
           animation: navigation-modal-slide-out 0.6s ease-out;
         }
@@ -34,4 +31,5 @@
         font-size: 1em;
         padding: 8px;
     }
+    
 }

@@ -1,6 +1,7 @@
 @import '../global-variables.scss';
 
 #location-section {
+
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -11,4 +12,5 @@
     "summary summary summary summary summary summary";
     grid-gap: 0.8em;
     background: white;
+    
 }

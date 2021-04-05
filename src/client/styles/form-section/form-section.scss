@@ -1,6 +1,7 @@
 @import '../global-variables.scss';
 
 .form-section {
+
     padding: $padding_8px;
     margin: $margin_8px;
     grid-area: form;
@@ -19,8 +20,6 @@
         grid-area: start-date;
         justify-content: space-between;
         align-items: center;
-
-
     }
 
     .end-date-class {
@@ -46,6 +45,7 @@
             outline: none;
             border: $border-focus-value;
         }
+        
     }
 
     .date-picker-class {

@@ -37,6 +37,7 @@
 }
 
 .navigation-modal {
+
     display: none;
     position: fixed;
     z-index: 1;
@@ -47,6 +48,7 @@
     padding: $padding_8px*4;
     background: rgba($form-background,0.9);
     cursor: pointer;
+    
     &-items {
         display: flex;
         flex-flow: column;
@@ -54,41 +56,29 @@
         justify-content: flex-start;
     }
     
-  }
+}
 
-  .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 30px;
-      color: $remove-btn-hover-background;
-      font-size: 2em;
-      font-weight: bold;
-    &:hover {
-        color: $submit-btn-hover-background;
-        cursor: pointer;
+@keyframes navigation-modal-slide-in {
+
+    from {
+        transform: translateX(-200px);
+
     }
-    &:focus{
-        outline: none;
+
+    to {
+        transform: translateX(0);
     }
-  }
 
-  @keyframes navigation-modal-slide-in {
-      from {
-          transform: translateX(-200px);
-        
-      }
-      to {
-          transform: translateX(0);
-      }
-
-  }
+}
 
 
-  @keyframes navigation-modal-slide-out {
+@keyframes navigation-modal-slide-out {
+
     from {
         transform: translateX(0);
       
     }
+
     to {
         transform: translateX(-200px);
     }
@@ -96,6 +86,7 @@
 }  
 
 .navigation-burger {
+
     &-items {
         display: none;
         flex-flow: column;
@@ -111,4 +102,5 @@
         height: 0.25em;
         border-bottom: 0.2em solid $submit-btn-hover-background;
     }
+    
 }

@@ -1,5 +1,5 @@
 const $NAVIGATION_MODAL_ELEMENT = document.querySelector('.navigation-modal');
-const $CLOSE_BUTTON_ELEMENT = document.querySelector('.close-btn');
+const $CLOSE_BUTTON_ELEMENT = document.querySelector('#close-btn-navigation');
 
 const hideNavigationModal = (e)=>{
     

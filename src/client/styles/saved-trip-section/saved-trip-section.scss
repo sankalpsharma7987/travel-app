@@ -1,15 +1,18 @@
 @import '../global-variables.scss';
 
 #saved-trip-section {
+
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: stretch;
     grid-area: trip;
     background: white;
+
 }
 
 .saved {
+    
     &-trip-heading {
         display: none;
         padding: $padding_8px;

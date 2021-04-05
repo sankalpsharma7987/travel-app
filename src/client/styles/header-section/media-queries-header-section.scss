@@ -1,4 +1,5 @@
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
+
     .header{
         &-section {
             flex-flow: column;
@@ -18,9 +19,11 @@
             }
         }
     }
+
 }
 
-@media screen and (min-width: 401px) and (max-width: 600px){
+@media screen and (min-width: 401px) and (max-width: 600px) {
+
     .header{
         &-section {
             flex-flow: column;
@@ -40,4 +43,5 @@
             }
         }
     }
+    
 }

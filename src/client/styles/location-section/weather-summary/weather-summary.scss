@@ -1,15 +1,18 @@
 @import '../../global-variables.scss';
 
 .weather-summary-section {
+    
     grid-area: summary;
     display: flex;
     flex-flow: column;
     align-items: stretch;
     justify-content:flex-start;
     overflow: auto;
+
 }
 
 .weather-summary {
+
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr;
     grid-template-areas: "date temp descrip cloud precip";
@@ -53,12 +56,17 @@
     &-precip {
         grid-area: precip;
     }
+
 }
 
-.hide-weather-summary{
+.hide-weather-summary {
+
     display: none;
+
 }
 
 .show-weather-summary {
+
     display: flex;
+
 }

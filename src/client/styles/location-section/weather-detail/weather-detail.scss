@@ -1,6 +1,7 @@
 @import '../../global-variables.scss';
 
 .weather-detail-section {
+
     display: flex;
     grid-area: detail;
     flex-flow: row;
@@ -9,15 +10,15 @@
     margin: $margin_8px;
     padding: $padding_8px;
 
-    
-
     &-background {
         background: $card-background;
         border-radius: $border-radius-value;
     }
+
 }
 
 .weather-detail {
+
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -33,16 +34,20 @@
 }
 
 .weather-detail-description {
+
     display: flex;
     flex-flow: column;
+
 }
 
 .weather-detail-info {
+
     display: flex;
     flex-flow: column;
     grid-gap: 0.5em;
     justify-content: center;
     align-items: flex-start;
+
 }
 
 .location-image {
@@ -60,6 +65,7 @@
 }
 
 .save-trip-btn {
+
     background: $submit-btn-background;
     color: white;
     font-size: 1.5em;
@@ -77,5 +83,5 @@
     &:focus {
         outline: none;
     }
+    
 }
-

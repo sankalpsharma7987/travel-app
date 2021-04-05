@@ -12,7 +12,7 @@ import { createWeatherDetailElements } from './js/lib/detail/createWeatherDetail
 import { updateWeatherDetail } from './js/lib/detail/updateWeatherDetail';
 
 import { changeEndDatePicker } from './js/lib/misc/changeEndDatePicker';
-import { enableLocationImageModal,disableLocationImageModal } from './js/lib/misc/locationImageModalBehavior';
+import { enableLocationImageModal,disableLocationImageModal } from './js/lib/imageModal/locationImageModalBehavior';
 import { clearLocationImageUI} from './js/lib/locationImage/clearLocationImageUI';
 import { createErrorElement } from './js/lib/error/createErrorElement';
 import { createLocationImageElements} from './js/lib/locationImage/createLocationImageElements';

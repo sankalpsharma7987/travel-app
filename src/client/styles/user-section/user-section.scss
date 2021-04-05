@@ -1,6 +1,7 @@
 @import '../global-variables.scss';
 
 #user-section {
+
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -13,26 +14,11 @@
     padding: $padding_8px;
     background: $image_background url('../../images/fantasy-3502188_1920.jpg') no-repeat;
     background-size: 100% 100%;
+
 }
-// }
-
-
-// .content-section {
-//     display: flex;
-//     flex-flow: column wrap;
-//     grid-area: page-content;
-//     justify-content: flex-start;
-//     align-items: center;
-//     color: white;
-
-//     h1 {
-//         font-size: 3em;
-//         font-family: cursive;
-//     }
-
-// }
 
 .detail-section {
+
     display: flex;
     flex-flow: column;
     grid-area: detail;

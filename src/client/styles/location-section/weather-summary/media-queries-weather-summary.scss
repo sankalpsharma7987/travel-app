@@ -1,5 +1,5 @@
-@media screen and (max-width: 400px)
-{   
+@media screen and (max-width: 400px) {
+
     .weather-summary-section {
         grid-area: summary;
         display: grid;
@@ -26,10 +26,11 @@
         }
 
     }
+
 }
 
-@media screen and (min-width: 401px) and (max-width: 500px)
-{
+@media screen and (min-width: 401px) and (max-width: 500px) {
+
     .weather-summary-section {
         grid-area: summary;
         display: grid;
@@ -51,15 +52,15 @@
         }                      
 
         
-        &-date,&-temp,&-description,&-cloud,&-precip{
+        &-date,&-temp,&-description,&-cloud,&-precip {
             font-size: 1em;
         }
 
     }
 }
 
-@media screen and (min-width: 501px) and (max-width: 700px)
-{
+@media screen and (min-width: 501px) and (max-width: 700px) {
+    
     .weather-summary-section {
         grid-area: summary;
         display: grid;
@@ -81,39 +82,10 @@
         }                      
 
         
-        &-date,&-temp,&-description,&-cloud,&-precip{
+        &-date,&-temp,&-description,&-cloud,&-precip {
             font-size: 1em;
         }
 
     }
+
 }
-
-// @media screen and (min-width: 601px) and (max-width: 700px)
-// {
-//     .weather-summary-section {
-//         grid-area: summary;
-//         display: grid;
-//         grid-template-columns: 1fr;
-//         align-items: center;
-//         justify-content: center;
-//     }
-    
-//     .weather-summary {
-//         display: flex;
-//         flex-flow: column;
-//         justify-content: center;
-//         align-items: center;
-
-//         &-display {
-//             flex-flow: column;
-//             justify-content: center;
-//             align-items: center;
-//         }                      
-
-        
-//         &-date,&-temp,&-description,&-cloud,&-precip{
-//             font-size: 1em;
-//         }
-
-//     }
-// }
