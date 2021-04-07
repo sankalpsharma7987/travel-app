@@ -1,5 +1,7 @@
 const $NAVIGATION_MODAL_ELEMENT = document.querySelector('.navigation-modal');
 const $CLOSE_BUTTON_ELEMENT = document.querySelector('#close-btn-navigation');
+const $HEADER_SECTION = document.querySelector('.header-section');
+const $NAVIGATION_SECTION = document.querySelector('#navigation-section');
 
 /*Client-Side Javascript. 
 This helper function is called by other javascript functions to hide the navigation modal for small screen resolutions.
@@ -14,8 +16,11 @@ const hideNavigationModal = (e)=>{
         $NAVIGATION_MODAL_ELEMENT.classList.remove('navigation-modal-slide-in');
         setTimeout(()=>{
             $NAVIGATION_MODAL_ELEMENT.classList.remove('navigation-modal-display');
+            $HEADER_SECTION.classList.remove('navigation-mobile-background');
+            $NAVIGATION_SECTION.removeAttribute('style');
     
         },600)
+        
     }
     
 }

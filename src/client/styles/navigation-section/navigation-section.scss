@@ -19,9 +19,14 @@
     
 }
 
+
 .navigation-mobile {
     display: none;
     padding: $padding_8px*2;
+    &-background {
+        background-image: linear-gradient(180deg,#55c8da,#fff,#55c8da)
+    }
+
 }
 
 .navigation-item{

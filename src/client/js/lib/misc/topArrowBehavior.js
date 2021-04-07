@@ -6,7 +6,9 @@ const $TOP_ARROW_ELEMENT = document.querySelector('.arrow-top');
 
 const stickyHeaderSection = ()=>{
 
-    if (window.scrollY>0)
+    //Change formatting after the window has scrolled over the navigation section
+    
+    if (window.scrollY>50) 
     {   
         $HEADER_SECTION_ELEMENT.classList.add('header-section-position');
         $HEADER_NAVIGATION_ELEMENT.classList.add('header-navigation-display');
