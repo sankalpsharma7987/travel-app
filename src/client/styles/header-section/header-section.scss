@@ -4,8 +4,9 @@
 
     &-section {
         display: flex;
-        flex-flow: row;
-        justify-content: center;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: stretch;
         background-image : $card-background;
         border: none;
 
@@ -16,6 +17,25 @@
             background: $form-background;
         }
     }
+
+    &-banner {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-navigation {
+        display: none;
+        flex-flow: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-display {
+            display: flex;
+        }
+    }
+
 
 
 
