@@ -11,6 +11,7 @@ const updateWeatherDetail = (weatherData,startDatePickerValue,endDatePickerValue
     const fragment = Client.createWeatherDetailElements(weatherData,startDatePickerValue,endDatePickerValue,tripDuration);
     $WEATHER_DETAIL_ELEMENT.appendChild(fragment);
     $WEATHER_DETAIL_SECTION.classList.add('weather-detail-section-background');
+    Client.scrollIntoSection('#location-section');
 }
 
 export { updateWeatherDetail };

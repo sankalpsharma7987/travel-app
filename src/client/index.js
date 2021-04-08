@@ -29,6 +29,7 @@ import { clearErrorUI } from './js/lib/error/clearErrorUI';
 import { calculateDateDiffDays } from './js/lib/misc/calculateDateDiffDays';
 import { getTravelData } from './js/getTravelData';
 import { setDatePickerValue } from './js/lib/misc/setDatePickerValue';
+import { scrollIntoSection } from './js/lib/misc/scrollIntoSection';
 import { showWeatherSummary } from './js/lib/summary/showWeatherSummary';
 
 import { clearSaveTripUI } from './js/lib/trip/clearSaveTripUI';
@@ -79,7 +80,7 @@ import './images/travel-4548127_640.png';
 export { clearSummaryUI, fetchTravelWeatherSummaryData,updateWeatherSummaryUI,createWeatherSummaryElements,updateWeatherSummary,
     clearDetailUI,fetchTravelWeatherDetailData,updateDetailUI,createWeatherDetailElements,updateWeatherDetail,clearLocationImageUI,createLocationImageElements,
     fetchCountryImage,fetchLocationImage,updateLocationImage,updateLocationImageUI,
-    clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,showWeatherSummary,
+    clearUI,calculateDateDiffDays,getTravelData,setDatePickerValue,scrollIntoSection,showWeatherSummary,
     clearSaveTripUI,createSaveTripElement,deleteSavedTrip,getTripData,
     loadTripData,
     postTripData,updateSaveTripUI,removeSavedTrip,saveTrip, createErrorElement, changeEndDatePicker, 
