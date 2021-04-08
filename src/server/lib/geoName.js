@@ -28,9 +28,15 @@ const mockGeoNameAPI = (address,callback)=>{
             callback('Could not fetch results for this location',undefined);
         }
         else {
-            let latitude = body.geonames[0].lat;
-            let longitude = body.geonames[0].lng;
+
+            //Pull the object that matches the name property with the address value shared by the user
+
+            let geoName = body.geonames.find(geoname=>geoname.name.toLowerCase()==address.toLowerCase());
+            console.log(geoName);
+            let latitude = geoName.lat;
+            let longitude = geoName.lng;
             callback(undefined,{latitude,longitude});
+            
         }
 
     })
