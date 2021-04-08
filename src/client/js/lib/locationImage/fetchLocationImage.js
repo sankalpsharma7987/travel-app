@@ -7,7 +7,8 @@ const fetchLocationImage = async(address)=>{
 
     try {
 
-        const res = await fetch(`http://localhost:3000/fetchImage?address=${address}`)
+        // const res = await fetch(`http://localhost:3000/fetchImage?address=${address}`)
+        const res = await fetch(`/fetchImage?address=${address}`);
         const data = await res.json();
         return data;
         

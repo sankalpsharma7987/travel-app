@@ -8,7 +8,8 @@ const fetchTravelWeatherDetailData = async(address)=>{
 
     try {
 
-        const res = await fetch(`http://localhost:3000/current?address=${address}`)
+        // const res = await fetch(`http://localhost:3000/current?address=${address}`)
+        const res  = await fetch(`/current?address=${address}`);
         const data = await res.json();
         return data;
 

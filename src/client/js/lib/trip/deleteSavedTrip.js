@@ -9,7 +9,7 @@ const deleteSavedTrip = async(id)=>{
     
     try {
 
-        const res = await fetch(`http://localhost:3000/deleteTrip?id=${id}`, {
+        const res = await fetch(`/deleteTrip?id=${id}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ const postTripData = async(trip)=>{
 
     try {
         
-        const res = await fetch(`http://localhost:3000/saveTrip`, {
+        const res = await fetch(`/saveTrip`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

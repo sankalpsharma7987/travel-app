@@ -8,7 +8,7 @@ const getTripData = async()=>{
     
     try {
 
-        const res = await fetch(`http://localhost:3000/fetchTrip`)
+        const res = await fetch(`/fetchTrip`)
         const data = await res.json();
         return data;
         
