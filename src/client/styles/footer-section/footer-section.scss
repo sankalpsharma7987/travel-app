@@ -1,0 +1,23 @@
+@import '../global-variables.scss';
+
+#footer-section {
+
+    grid-area: ft;
+    text-align: center;
+    background: $submit-btn-background;
+    padding: $padding_8px;
+    margin: $margin_8px;
+    font-size: 1.5em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    a{
+        text-decoration: none;
+        color: $submit-btn-hover-background;
+        &:hover {
+            color: $image-background;
+        }
+    }
+}

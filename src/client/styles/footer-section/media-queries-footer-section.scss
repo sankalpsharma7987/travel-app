@@ -1,0 +1,13 @@
+@media screen and(min-width: 401px) and(max-width: 800px)
+{
+    #footer-section{
+        font-size: 1em;
+    }
+}
+
+@media screen and(max-width: 400px)
+{
+    #footer-section{
+        font-size: 0.8em;
+    }
+}
