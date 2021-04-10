@@ -11,7 +11,7 @@ The GeoName will be first translated and the latitude and longitude will be then
 
 router.get('/forecast',(req,res)=>{
 
-    mockGeoNameAPI(req.query.address,(error,{latitude,longitude}={})=>{
+    mockGeoNameAPI(req.query.address,(error,{latitude,longitude,countryName}={})=>{
 
         if(error)
         {
@@ -26,6 +26,7 @@ router.get('/forecast',(req,res)=>{
                 }
 
                 else {
+                    data.countryName = countryName;
                     res.send(data);
                 }
     
@@ -42,7 +43,7 @@ router.get('/current',(req,res)=>{
 /*This router request will send the request of the query address to find current weather details
 The GeoName will be first translated and the latitude and longitude will be then shared to weatherBit API to retrieve the current weather details*/
 
-    mockGeoNameAPI(req.query.address,(error,{latitude,longitude}={})=>{
+    mockGeoNameAPI(req.query.address,(error,{latitude,longitude,countryName}={})=>{
 
         if(error)
         {
@@ -57,6 +58,7 @@ The GeoName will be first translated and the latitude and longitude will be then
                 }
 
                 else {
+                    data.countryName = countryName;
                     res.send(data);
                 }
     
