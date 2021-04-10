@@ -12,18 +12,28 @@ const mockPixaBayAPI = (textValue,callback)=>{
     const method='GET';
 
     request({url,json,method},(error,{body}={})=>{
-        if(error){
-            callback('Unable to connect to the PixaBay API Services',undefined);
+        
+        try{
+
+            if(error){
+                callback('Unable to connect to the PixaBay API Services',undefined);
+            }
+     
+            else if(body.total===0)
+            {
+                callback('Could not fetch image for this location',undefined);
+            }
+    
+            else{
+    
+                callback(undefined,body.hits);
+            }
+    
+
         }
- 
-        else if(body.total===0)
+        catch(e)
         {
             callback('Could not fetch image for this location',undefined);
-        }
-
-        else{
-
-            callback(undefined,body.hits);
         }
 
     })
