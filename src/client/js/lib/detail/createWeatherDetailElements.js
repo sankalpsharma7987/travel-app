@@ -8,7 +8,6 @@ A save trip button is added in order to save the trip at the server.
 const createWeatherDetailElements = (weatherData,startDatePickerValue,endDatePickerValue,tripDuration)=>{
     
     const locationDiv = document.createElement('div');
-    console.log(weatherData);
     let text= `<h3>Weather for ${weatherData.cityName},${weatherData.countryName}</h3>`;
     locationDiv.innerHTML = text;
     locationDiv.classList.add('weather-detail-location');
