@@ -37,7 +37,7 @@
         display: flex;
         flex-flow: column; 
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         grid-gap: 0.5em;
         margin: $margin_8px;
         border-top: 1px solid rgb(193, 201, 209);
@@ -45,6 +45,7 @@
         background: $save-trip-background;
         width: 130px;
         height: 135px;
+        padding: $padding_8px;
 
         &-date, &-daysRemaining,&location {
             display: block;

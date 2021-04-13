@@ -2,7 +2,7 @@ const $INPUT_ELEMENT = document.querySelector('#destination');
 const $SUBMIT_BUTTON = document.querySelector('#submit-button');
 const $DATE_ELEMENT = document.querySelector('#date-picker');
 const $END_DATE_ELEMENT = document.querySelector('#end-date-picker');
-let countryCode = '';
+
 
 /* Client side JavaScript code that will run when the Plan My Trip button is clicked to fetch weather details and location image.
 The start date and end date are picked from the from and to datepickers. The countdown before the start of the trip is calcluated.
@@ -16,19 +16,31 @@ If error is observed, the errorUI elements will be updated.
 
 const getTravelData = async()=> {
 
+    let countryCode = '';
+    $SUBMIT_BUTTON.setAttribute('disabled',true);
     Client.clearErrorUI();
+    const inputValue = $INPUT_ELEMENT.value;
+    const startDatePickerValue = $DATE_ELEMENT.value;
+    const endDatePickerValue = $END_DATE_ELEMENT.value;
+    
+    // Clears form UI Element.
+
+    Client.clearUI();
+
+
     
     //The destination string is validated to ensure the input value of the destination is not empty
 
-    if(Client.validateDestinationInput($INPUT_ELEMENT.value))
+    if(Client.validateDestinationInput(inputValue))
     {
+        // Client.toggleSubmitButton(true);
+
         Client.clearSummaryUI();
         Client.clearDetailUI();
         Client.clearLocationImageUI();
         
         const dateVal = new Date();
-        const startDatePickerValue = $DATE_ELEMENT.value;
-        const endDatePickerValue = $END_DATE_ELEMENT.value;
+
 
         //dayDiff gives the countdown of the number of days left before the trip.
 
@@ -45,36 +57,42 @@ const getTravelData = async()=> {
         /*If the weatherDataType is forecast, then the current weather as well as the 15 day forecast of the weather, for the destination, is fetched.
         The weather summary section would be displayed using showWeatherSummary function.
         */
-
+        Client.updateLocationImageUI({webformatURL:'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'});
         if(weatherDataType==='forecast')
         {
             Client.showWeatherSummary(true);
-            Client.fetchTravelWeatherSummaryData($INPUT_ELEMENT.value).then(
-                data => Client.updateWeatherSummaryUI(data)
-            ).catch(e=>Client.updateErrorUI());
 
-            Client.fetchTravelWeatherDetailData($INPUT_ELEMENT.value).then(
-                data => 
+            try {
+                const weatherSummaryData = await Client.fetchTravelWeatherSummaryData(inputValue);
+                await Client.updateWeatherSummaryUI(weatherSummaryData);
+
+                const weatherDetailData = await Client.fetchTravelWeatherDetailData(inputValue);
+                await Client.updateDetailUI(weatherDetailData,startDatePickerValue,endDatePickerValue,tripDuration);
+                countryCode = weatherDetailData.countryCode;
+
+                const imageData = await Client.fetchLocationImage(inputValue);
+                if(imageData.error === 'Could not find image for this location')
                 {
-                    Client.updateDetailUI(data,startDatePickerValue,endDatePickerValue,tripDuration)
-                    countryCode = data.countryCode;
+                    if(countryCode)
+                    {
+                        const flagData = await Client.fetchCountryImage(countryCode);
+                        await Client.updateLocationImageUI({webformatURL:flagData});
+                    }
+                    else {
+                        Client.updateErrorUI();
+                        Client.clearLocationImageUI();
+                    }
                 }
                 
-            ).then(
-                Client.updateLocationImageUI({webformatURL:'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'}), //This function will be first called to render the spinning wheel image.
-                Client.fetchLocationImage($INPUT_ELEMENT.value).then(
-                    data=> {
-                        if(data.error === 'Could not find image for this location')
-                        {
-                            Client.fetchCountryImage(countryCode).then(data=>Client.updateLocationImageUI({webformatURL:data}));
-                        }
-                        else {
-                            Client.updateLocationImageUI(data);
-                        }
-                    }
+                else {
+                    await Client.updateLocationImageUI(imageData);
+                }
 
-                ).catch(e=> Client.updateErrorUI())
-            ).catch(e=>Client.updateErrorUI());
+            }
+            catch(e){
+                Client.updateErrorUI();
+            }
+
 
         }
 
@@ -86,30 +104,36 @@ const getTravelData = async()=> {
         else {
             
             Client.showWeatherSummary(false);
-            
-            Client.fetchTravelWeatherDetailData($INPUT_ELEMENT.value).then(
-                data => 
+
+            try{
+                const weatherData = await Client.fetchTravelWeatherDetailData(inputValue);
+
+                countryCode = weatherData.countryCode;
+    
+                await Client.updateDetailUI(weatherData,startDatePickerValue,endDatePickerValue,tripDuration);
+    
+                const imageData = await Client.fetchLocationImage(inputValue);
+                if(imageData.error=== 'Could not find image for this location')
                 {
-                    Client.updateDetailUI(data,startDatePickerValue,endDatePickerValue,tripDuration)
-                    countryCode = data.countryCode;
-                }
-                
-            ).then(
-                Client.updateLocationImageUI({webformatURL:'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'}), //This function will be first called to render the spinning wheel image.
-                Client.fetchLocationImage($INPUT_ELEMENT.value).then(
-                    data=> {
-                        if(data.error === 'Could not find image for this location')
-                        {   
-                            Client.fetchCountryImage(countryCode).then(data=>Client.updateLocationImageUI({webformatURL:data}));
-                        }
-                        else {
-                            Client.updateLocationImageUI(data);
-                        }
+                    if(countryCode)
+                    {
+                        const flagData = await Client.fetchCountryImage(countryCode);
+                        await Client.updateLocationImageUI({webformatURL:flagData});
                     }
+                    else {
+                        Client.updateErrorUI();
+                        Client.clearLocationImageUI();
+                    }
+                }
+                else {
+                    await Client.updateLocationImageUI(imageData);
+                }
+    
 
-                ).catch(e=>Client.updateErrorUI())
-
-            ).catch(e=>Client.updateErrorUI());
+            }
+            catch(e){
+                Client.updateErrorUI();
+            }
 
         }
 
@@ -121,7 +145,7 @@ const getTravelData = async()=> {
         Client.updateErrorUI('Please enter the destination name');
     }
 
-    Client.clearUI() // Clears the textbox UI Element.
+    $SUBMIT_BUTTON.removeAttribute('disabled');
 
 }
 

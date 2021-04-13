@@ -81,6 +81,12 @@
         &:focus {
             outline: none;
         }
+
+        &:disabled {
+            color: $remove-btn-hover-background;
+            background: $form-background;
+            cursor: wait;
+        }
     }
 
 }

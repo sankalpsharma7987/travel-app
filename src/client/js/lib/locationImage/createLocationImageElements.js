@@ -7,6 +7,7 @@ const createLocationImageElements = (imageData)=>{
 
     const locationImage = document.createElement('img');
     locationImage.setAttribute('src',imageData.webformatURL);
+    locationImage.setAttribute('alt','Image not found');
 
     const fragment = document.createDocumentFragment();
     fragment.appendChild(locationImage);

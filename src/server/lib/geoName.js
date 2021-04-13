@@ -33,15 +33,17 @@ const mockGeoNameAPI = (address,callback)=>{
             try{
                 let geoName = body.geonames.find(
 
-                    //Verify if the geoName object has any of its name or countryName as part of the address string,shared by the user.
+                    //Verify if the name or countryName, in geoName object, matches with the address string shared by the user.
                     
-                    geoName=>address.toLowerCase().indexOf(geoName.name.toLowerCase())||address.toLowerCase().indexOf(geoName.countryName.toLowerCase())
+                    geoName=>address.toLowerCase()==geoName.name.toLowerCase()
+                                    ||
+                        address.toLowerCase()==geoName.countryName.toLowerCase()
                     );
 
                 let latitude = geoName.lat;
                 let longitude = geoName.lng;
                 let countryName = geoName.countryName;
-                
+
                 callback(undefined,{latitude,longitude,countryName});
    
             }
