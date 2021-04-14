@@ -15,8 +15,11 @@ const calculateDateDiffDays = (currentDateString,futureDateString)=>{
     )
 
     const timeConstant = 1000 * 60 * 60 * 24;
+    const timeDiff = futureDateUTC-currentDateUTC;
 
-    return Math.floor ((futureDateUTC-currentDateUTC)/timeConstant);
+    const resultVal = timeDiff/timeConstant;
+    const result = Math.floor(resultVal);
+    return result;
        
 }
 

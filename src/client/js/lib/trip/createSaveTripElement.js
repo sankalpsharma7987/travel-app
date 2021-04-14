@@ -25,7 +25,12 @@ const createSaveTripElement = (data) => {
     /*This timestamp is added as a workaround for the day offset that is returned when string is passed to date function.
     This offset issue is not observed in setDatePickerValue function as we are passing the date in the Date constructor and not the string.*/
 
-    const futureDateVal = new Date(`${data.startDate} 00:00:00`); 
+    const futureDateSplitVal = data.startDate.split('-');
+
+    //This Date constructor is used in order to accomodate date conversions across different browsers
+    
+    const futureDateVal = new Date(`${futureDateSplitVal[0]}`,`${futureDateSplitVal[1]-1}`,`${futureDateSplitVal[2]}`); 
+    
     let futureDay = futureDateVal.getDate();
     let futureMonth = futureDateVal.getMonth()+1;
     let futureYear = futureDateVal.getFullYear();
@@ -48,7 +53,7 @@ const createSaveTripElement = (data) => {
     }
    
     const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
-    const futureDate = `${futureYear}-${futureMonth}-${futureDay}`
+    const futureDate = `${futureYear}-${futureMonth}-${futureDay}`;
     const daysRemaining = Client.calculateDateDiffDays(currentDate,futureDate);
     
     if(daysRemaining<0)

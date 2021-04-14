@@ -6,7 +6,7 @@
     text-align: center;
     background: $submit-btn-background;
     padding: $padding_8px;
-    margin: $margin_8px;
+    margin: $margin_8px*2 $margin_8px $margin_8px $margin_8px;
     font-size: 1.5em;
     display: flex;
     flex-flow: column;
